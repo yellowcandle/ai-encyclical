@@ -180,6 +180,42 @@ footer.colophon {
 footer.colophon strong { color: var(--ink); }
 footer.colophon a { color: var(--cardinal); }
 
+aside.translators-note {
+  max-width: 70rem; margin: 1.75rem auto 0;
+  border: 1px solid var(--rule); border-left: 3px solid var(--cardinal);
+  background: var(--paper-deep);
+  padding: 1.1rem 1.4rem 1.2rem;
+  border-radius: 4px;
+  font-size: .9rem; line-height: 1.55;
+}
+aside.translators-note .label {
+  font-variant: small-caps; letter-spacing: .22em;
+  color: var(--cardinal); font-weight: 600;
+  font-size: .78rem; margin-bottom: .65rem;
+  display: flex; gap: .75rem; align-items: baseline;
+}
+aside.translators-note .label .zh {
+  font-variant: normal; letter-spacing: .05em;
+  font-family: 'Noto Serif TC', serif; font-weight: 700;
+}
+aside.translators-note .cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+}
+aside.translators-note .cols .zh {
+  font-family: 'Noto Serif TC', 'Source Han Serif TC', serif;
+  font-size: .92rem; line-height: 1.75;
+}
+aside.translators-note p { margin: 0 0 .55rem; }
+aside.translators-note p:last-child { margin-bottom: 0; }
+aside.translators-note strong { color: var(--ink); }
+aside.translators-note a { color: var(--cardinal); }
+@media (max-width: 900px) {
+  aside.translators-note .cols { grid-template-columns: 1fr; gap: .9rem; }
+  aside.translators-note .cols .zh {
+    border-top: 1px dashed var(--rule); padding-top: .85rem;
+  }
+}
+
 @media (max-width: 900px) {
   .bilingual, .subhead { grid-template-columns: 1fr; }
   .col-zh { border-top: 1px dashed var(--rule); padding-top: 1.5rem; margin-top: 1rem; }
@@ -202,6 +238,23 @@ footer.colophon a { color: var(--cardinal); }
     Vatican, 15 May 2026 · 梵蒂岡，二○二六年五月十五日
   </div>
 </header>
+
+<aside class="translators-note" role="note" aria-label="Translator's note and source">
+  <div class="label">
+    <span>Translator&rsquo;s Note &amp; Source</span>
+    <span class="zh">譯者按與來源</span>
+  </div>
+  <div class="cols">
+    <div class="en">
+      <p>This edition places the official Vatican English text alongside an <strong>unofficial, AI-assisted Traditional Chinese study translation</strong> rendered in Hong Kong Catholic terminology. The English text is the authoritative original; the Chinese rendering has <strong>not been reviewed by ecclesiastical authority</strong> and should not be used for liturgical, magisterial, or scholarly citation &mdash; please consult the Holy See for an official translation when one is published.</p>
+      <p><strong>Source.</strong> English text: <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a> &mdash; <em>Magnifica Humanitas</em>, Encyclical Letter of His Holiness Pope Leo XIV, 15 May 2026. &copy; Libreria Editrice Vaticana. Scripture in English: Berean Standard Bible (public domain). Scripture in Chinese: 思高聖經 (Studium Biblicum Version).</p>
+    </div>
+    <div class="zh">
+      <p>本版以梵蒂岡英文官方本，並列呈現一份<strong>非官方、由人工智能輔助製作的繁體中文研讀翻譯</strong>，採用香港天主教用語。英文本為權威原文；中文翻譯<strong>未經教會權威審閱</strong>，不應用於禮儀、訓導或學術引用——請以聖座日後正式發布之譯本為準。</p>
+      <p><strong>來源。</strong>英文原文：<a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a>——教宗良十四世《壯麗的人性》通諭，二○二六年五月十五日。© 梵蒂岡教廷出版社版權所有。英文聖經引用：《貝雷亞標準聖經》（公有領域）；中文聖經引用：思高聖經學會《思高聖經》。</p>
+    </div>
+  </div>
+</aside>
 
 <nav class="toc"><h2>Contents · 目錄</h2><ol><li><strong>INTRODUCTION</strong><span class="zh">引言</span></li>
 <li><strong>CHAPTER ONE</strong> — <em>A DYNAMIC APPROACH FAITHFUL TO THE GOSPEL</em><span class="zh">第一章 · 忠於福音的動態進路</span></li>
@@ -770,9 +823,9 @@ footer.colophon a { color: var(--cardinal); }
 </ol></section>
 
 <footer class="colophon">
-<p><strong>Source</strong> · English text: <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a> (official). © Libreria Editrice Vaticana.</p>
-<p><strong>Chinese translation</strong> · <em>Unofficial study translation</em> rendered in Hong Kong Catholic terminology. Not a magisterial text. For liturgical or scholarly citation please await the official translation from the Holy See.</p>
-<p><strong>Scripture quotations</strong> · English passages from the <a href="https://bible.helloao.org" target="_blank" rel="noopener">Berean Standard Bible</a> via HelloAO Bible API. Chinese passages from <strong>思高聖經 (Studium Biblicum Version)</strong> — published by the 思高聖經學會, Hong Kong.</p>
+<p><strong>Source</strong> · English text: <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a> (official) &mdash; <em>Magnifica Humanitas</em>, Encyclical Letter of His Holiness Pope Leo XIV, 15 May 2026. &copy; Libreria Editrice Vaticana.</p>
+<p><strong>Chinese translation</strong> · <em>Unofficial, AI-assisted study translation</em> in Hong Kong Catholic terminology. Not a magisterial text and not reviewed by ecclesiastical authority. For liturgical or scholarly citation please await the official translation from the Holy See.</p>
+<p><strong>Scripture quotations</strong> · English passages from the <a href="https://bible.helloao.org" target="_blank" rel="noopener">Berean Standard Bible</a> (public domain) via the HelloAO Bible API. Chinese passages from <strong>思高聖經 (Studium Biblicum Version)</strong>, 思高聖經學會, Hong Kong.</p>
 <p style="margin-top:1rem">228 numbered paragraphs · 224 footnotes · 25 scripture lookups</p>
 </footer>
 
