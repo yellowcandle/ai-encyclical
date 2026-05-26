@@ -245,7 +245,9 @@ footer.colophon {
 footer.colophon strong { color: var(--ink); }
 footer.colophon a { color: var(--cardinal); }
 
-aside.translators-note {
+/* Front-matter notes: translator's note (§) and TL;DR (‡) share the
+   same bordered-panel treatment; only the leading mark differs. */
+aside.translators-note, aside.tldr-note {
   max-width: 70rem; margin: 1.75rem auto 0;
   border: 1px solid var(--rule);
   background: var(--paper-deep);
@@ -254,43 +256,57 @@ aside.translators-note {
   font-size: var(--text-caption); line-height: 1.6;
   position: relative;
 }
-aside.translators-note::before {
-  content: "§"; position: absolute;
-  top: 1.1rem; left: 1.5rem;
+aside.tldr-note { margin-top: 1.25rem; }
+aside.translators-note::before,
+aside.tldr-note::before {
+  position: absolute; top: 1.1rem; left: 1.5rem;
   color: var(--cardinal); font-size: 1.4rem; line-height: 1;
   font-family: 'EB Garamond', 'Source Serif Pro', serif;
 }
-aside.translators-note .label {
+aside.translators-note::before { content: "\00a7"; }   /* § section mark */
+aside.tldr-note::before        { content: "\002021"; } /* ‡ double dagger */
+aside.translators-note .label,
+aside.tldr-note .label {
   font-variant-caps: all-small-caps; letter-spacing: .22em;
   color: var(--cardinal); font-weight: 600;
   font-size: var(--text-label); margin: 0 0 .85rem 2rem;
   display: flex; gap: .75rem; align-items: baseline;
   font-feature-settings: "smcp", "kern";
 }
-aside.translators-note .label .zh {
+aside.translators-note .label .zh,
+aside.tldr-note .label .zh {
   font-variant: normal; letter-spacing: .05em;
   font-family: 'Noto Serif TC', serif; font-weight: 700;
 }
-aside.translators-note .cols {
+aside.translators-note .cols,
+aside.tldr-note .cols {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem;
 }
-aside.translators-note .cols .zh {
+aside.translators-note .cols .zh,
+aside.tldr-note .cols .zh {
   font-family: 'Noto Serif TC', 'Source Han Serif TC', serif;
   font-size: var(--text-caption); line-height: 1.8;
 }
-aside.translators-note p { margin: 0 0 .6rem; }
-aside.translators-note p:last-child { margin-bottom: 0; }
-aside.translators-note strong { color: var(--ink); }
-aside.translators-note a { color: var(--cardinal); }
-aside.translators-note a:focus-visible {
+aside.translators-note p,
+aside.tldr-note p { margin: 0 0 .6rem; }
+aside.translators-note p:last-child,
+aside.tldr-note p:last-child { margin-bottom: 0; }
+aside.translators-note strong,
+aside.tldr-note strong { color: var(--ink); }
+aside.translators-note a,
+aside.tldr-note a { color: var(--cardinal); }
+aside.translators-note a:focus-visible,
+aside.tldr-note a:focus-visible {
   outline: 2px solid var(--cardinal); outline-offset: 2px;
 }
 @media (max-width: 900px) {
-  aside.translators-note { padding-top: 1.1rem; }
-  aside.translators-note::before { display: none; }
-  aside.translators-note .label { margin-left: 0; }
-  aside.translators-note .cols { grid-template-columns: 1fr; gap: 1rem; }
-  aside.translators-note .cols .zh {
+  aside.translators-note, aside.tldr-note { padding-top: 1.1rem; }
+  aside.translators-note::before, aside.tldr-note::before { display: none; }
+  aside.translators-note .label, aside.tldr-note .label { margin-left: 0; }
+  aside.translators-note .cols, aside.tldr-note .cols {
+    grid-template-columns: 1fr; gap: 1rem;
+  }
+  aside.translators-note .cols .zh, aside.tldr-note .cols .zh {
     border-top: 1px dashed var(--rule); padding-top: .9rem;
   }
 }
@@ -351,6 +367,21 @@ aside.translators-note a:focus-visible {
     <div class="zh">
       <p>本版以梵蒂岡英文官方本，並列呈現一份<strong>非官方、由人工智能輔助製作的繁體中文研讀翻譯</strong>，採用香港天主教用語。英文本為權威原文；中文翻譯<strong>未經教會權威審閱</strong>，不適用於禮儀、訓導或學術引用；如需正式引用，請以聖座日後發布之譯本為準。標題及副題依照梵蒂岡新聞網中文版的官方譯名（《偉大的人類》、在人工智能時代守護人類）；正文翻譯先於該譯名製作，所用「壯麗」「人性」等詞亦為對 <em>humanitas</em> 一字的合理譯法。</p>
       <p><strong>來源。</strong>英文原文取自 <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a>：教宗良十四世《偉大的人類》通諭，二○二六年五月十五日。© 梵蒂岡教廷出版社版權所有。英文聖經引用：《貝雷亞標準聖經》（公有領域）；中文聖經引用：思高聖經學會《思高聖經》。</p>
+    </div>
+  </div>
+</aside>
+
+<aside class="tldr-note" role="note" aria-label="TL;DR and 摘要">
+  <div class="label">
+    <span>TL;DR</span>
+    <span class="zh">摘要</span>
+  </div>
+  <div class="cols">
+    <div class="en">
+      <p><em>Magnifica Humanitas</em> is Pope Leo XIV&rsquo;s first encyclical, on safeguarding the human person in the era of artificial intelligence. Across five chapters it argues that AI is not human intelligence, never morally neutral, and cannot be ethically &ldquo;aligned&rdquo; by engineering alone: its frameworks must be openly debated. The closing call is to disarm AI, disarm words, become weavers of hope.</p>
+    </div>
+    <div class="zh">
+      <p>《偉大的人類》是教宗良十四世首道通諭，主題為「在人工智能時代守護人類」。全文貫穿五章，主張人工智能不等同於人類智能、亦非道德中立、無法僅靠工程「對齊」於人性價值——倫理框架本身須公開辯論。結尾呼籲：解除人工智能的「武裝」、解除言語的「武裝」，成為「希望的編織者」。</p>
     </div>
   </div>
 </aside>
