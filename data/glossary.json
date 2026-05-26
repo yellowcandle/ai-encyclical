@@ -1,0 +1,150 @@
+{
+  "_meta": {
+    "source": "Wikipedia (EN and ZH-HK variants)",
+    "note": "Brief bilingual definitions for inline popovers and the top-of-page glossary block. HK Catholic terminology preferred over mainland transliterations where they differ."
+  },
+  "intro_en": "Brief Wikipedia-grounded references for readers new to either Catholic theology or AI terminology.",
+  "intro_zh": "為對天主教神學或人工智能不熟悉的讀者所提供的簡要參考。",
+  "entries": [
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Encyclical",
+      "term_zh": "通諭",
+      "wp_en": "https://en.wikipedia.org/wiki/Encyclical",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E9%80%9A%E8%AB%AD",
+      "def_en": "A circular letter from the Pope, traditionally addressed to bishops but often, as here, extended to all the faithful and people of goodwill. One of the highest forms of ordinary papal teaching.",
+      "def_zh": "教宗發出的公開信函，傳統上致主教，而如本文常擴展至全體信友及所有善心人士。屬教宗一般訓導中規格較高的一種。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Catholic Social Teaching",
+      "term_zh": "教會社會訓導",
+      "wp_en": "https://en.wikipedia.org/wiki/Catholic_social_teaching",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%A4%A9%E4%B8%BB%E6%95%99%E7%A4%BE%E6%9C%83%E8%A8%93%E5%B0%8E",
+      "def_en": "The body of Catholic moral teaching on social, political, and economic life, developed over 135 years through papal encyclicals beginning with <em>Rerum Novarum</em> (1891). <em>Magnifica Humanitas</em> extends this tradition to AI.",
+      "def_zh": "教會自《新事》通諭（1891 年）以來，藉教宗通諭等訓導文件所發展、關於社會、政治與經濟生活的倫理訓導體系。《偉大的人類》將此傳統延伸至人工智能領域。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Rerum Novarum (1891)",
+      "term_zh": "《新事》通諭",
+      "wp_en": "https://en.wikipedia.org/wiki/Rerum_novarum",
+      "wp_zh": null,
+      "def_en": "Pope Leo XIII&rsquo;s encyclical on labor, capital, and the social order, written during the upheavals of industrialization. The founding document of modern Catholic Social Teaching; <em>Magnifica Humanitas</em> marks its 135th anniversary.",
+      "def_zh": "教宗良十三世於工業革命動盪時期所頒，論勞動、資本與社會秩序的通諭。現代教會社會訓導的奠基文獻；《偉大的人類》正值其頒布一百三十五週年。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Common good",
+      "term_zh": "公益",
+      "wp_en": "https://en.wikipedia.org/wiki/Common_good#Catholic_social_thought",
+      "wp_zh": null,
+      "def_en": "A core principle of Catholic Social Teaching: the conditions of social life that allow groups and individuals to reach their fulfillment more fully and easily. Not the same as &ldquo;majority benefit.&rdquo;",
+      "def_zh": "教會社會訓導的核心原則：使團體或個人得以更完滿、更輕易達致圓滿之社會條件的總和。與「多數人利益」並不相同。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Subsidiarity",
+      "term_zh": "輔助性原則",
+      "wp_en": "https://en.wikipedia.org/wiki/Subsidiarity_(Catholicism)",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E8%BC%94%E5%8A%A9%E6%80%A7%E5%8E%9F%E5%89%87",
+      "def_en": "Decisions should be made at the most local level competent to make them; higher authorities should support, not replace, smaller bodies. The encyclical argues that in the digital age the &ldquo;highest level&rdquo; is no longer the State but transnational tech firms (&para;71).",
+      "def_zh": "決策應由最能勝任的最基層作出；更高的權威應協助而非取代較小的單位。本通諭指出，在數碼時代，這個「最高層」已不是國家，而是跨國科技公司（¶71）。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Tower of Babel",
+      "term_zh": "巴貝耳塔",
+      "wp_en": "https://en.wikipedia.org/wiki/Tower_of_Babel",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%B7%B4%E5%88%A5%E5%A1%94",
+      "def_en": "The biblical story (Gen 11) in which humanity, unified by one language, builds a tower to reach heaven; God confounds their language and scatters them. The encyclical uses it as the negative pole: technology in service of pride, control, and a single flattening logic.",
+      "def_zh": "聖經（創 11）所載：人類本操同一語言，欲建塔通天；天主混亂其語言，將之分散。本通諭以此為負面意象：科技服務於驕傲、控制與抹平差異的單一邏輯。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Nehemiah",
+      "term_zh": "乃赫米雅",
+      "wp_en": "https://en.wikipedia.org/wiki/Nehemiah",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%B0%BC%E5%B8%8C%E7%B1%B3",
+      "def_en": "A Hebrew official in the Persian court (5th c. BCE) who returned to Jerusalem and organized the rebuilding of the city&rsquo;s walls. The encyclical uses his slow, communal, prayerful project as the positive counter-image to Babel.",
+      "def_zh": "公元前五世紀波斯朝廷的猶太官員，後返回耶路撒冷主持重建城牆。本通諭以其緩慢、共議、寓於祈禱的工程，作為巴貝耳塔的正面對照意象。"
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Incarnation",
+      "term_zh": "降生奧蹟 / 聖言成了血肉",
+      "wp_en": "https://en.wikipedia.org/wiki/Incarnation_(Christianity)",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E9%81%93%E6%88%90%E8%82%89%E8%BA%AB",
+      "def_en": "The central Christian doctrine that God the Son took on human flesh in Jesus Christ &mdash; fully divine, fully human. In the encyclical&rsquo;s conclusion this is the answer to transhumanism: humanity is dignified by God&rsquo;s having entered it, not by being engineered beyond it (&para;231&ndash;233).",
+      "def_zh": "基督宗教核心信理：聖子在耶穌基督內取得人的血肉，全然是天主，亦全然是人。本通諭結尾以此回應超人類主義：人性的尊嚴來自天主的降生其中，而非藉工程超越其外（¶231–233）。"
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Artificial intelligence",
+      "term_zh": "人工智能",
+      "wp_en": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD",
+      "def_en": "Computer systems that perform tasks usually requiring human cognition: recognizing speech, generating text, making decisions. The encyclical insists this is not the same as human intelligence; systems only imitate certain functions of it (&para;99).",
+      "def_zh": "執行通常需要人類認知能力的電腦系統：語音識別、文本生成、決策等。本通諭堅持這並非人類智能，系統僅模仿其某些功能（¶99）。"
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "AI alignment",
+      "term_zh": "人工智能對齊",
+      "wp_en": "https://en.wikipedia.org/wiki/AI_alignment",
+      "wp_zh": null,
+      "def_en": "The technical and ethical project of making AI systems pursue goals that match human values. The encyclical argues alignment cannot be achieved by engineering alone &mdash; the ethical frameworks themselves must be openly debated (&para;107).",
+      "def_zh": "使人工智能系統的目標與人性價值一致的技術與倫理工程。本通諭主張此事不能單靠工程達成——倫理框架本身必須公開辯論（¶107）。"
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Transhumanism",
+      "term_zh": "超人類主義",
+      "wp_en": "https://en.wikipedia.org/wiki/Transhumanism",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E8%B6%85%E4%BA%BA%E9%A1%9E%E4%B8%BB%E7%BE%A9",
+      "def_en": "A movement holding that humanity should use technology to transcend biological limits &mdash; overcoming aging, illness, and the present human condition. The encyclical critiques it as treating the human as something to be perfected or surpassed (&para;115&ndash;117).",
+      "def_zh": "主張人類應運用科技超越生物極限——克服老化、疾病及當下人的處境——的思潮。本通諭批判其將人視為待完善或待超越者（¶115–117）。"
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Technocratic paradigm",
+      "term_zh": "科技至上典範",
+      "wp_en": "https://en.wikipedia.org/wiki/Laudato_si%27",
+      "wp_zh": null,
+      "def_en": "A term coined by Pope Francis (<em>Laudato Si&rsquo;</em>, 2015) for the worldview in which the logic of efficiency, control, and profit alone shapes personal, social, and economic decisions. <em>Magnifica Humanitas</em> extends this critique to AI.",
+      "def_zh": "教宗方濟各於《願祢受讚頌》通諭（2015）所提出之概念：在此世界觀中，效率、控制與利益的邏輯主導了個人、社會與經濟的一切決定。《偉大的人類》將此批判延伸至人工智能領域。"
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Lethal autonomous weapons",
+      "term_zh": "自主武器系統",
+      "wp_en": "https://en.wikipedia.org/wiki/Lethal_autonomous_weapon",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E8%87%B4%E5%91%BD%E6%80%A7%E8%87%AA%E4%B8%BB%E6%AD%A6%E5%99%A8",
+      "def_en": "Weapons that can select and engage targets without direct human intervention. The encyclical insists on traceable decision-making and rejects the framing of &ldquo;artificial moral agents&rdquo;: moral judgment cannot be reduced to calculation (&para;197&ndash;200).",
+      "def_zh": "無需人類直接介入便可選擇並攻擊目標的武器。本通諭堅持決策過程必須可追溯，並拒絕「人造道德主體」之提法：道德判斷不能化約為計算（¶197–200）。"
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Data colonialism",
+      "term_zh": "數據殖民主義",
+      "wp_en": "https://en.wikipedia.org/wiki/Data_colonialism",
+      "wp_zh": null,
+      "def_en": "A framework describing how digital systems extract personal data from populations (especially in the Global South) as a 21st-century analog to historical colonial resource extraction. Named explicitly in &para;178.",
+      "def_zh": "描述數碼系統如何從全球（尤其南半球）人口中抽取個人數據之框架，視為廿一世紀的殖民式資源開採之對應物。本通諭於 ¶178 明確點名。"
+    }
+  ]
+}
