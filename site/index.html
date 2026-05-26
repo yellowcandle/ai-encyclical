@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Magnifica Humanitas · 壯麗的人性 — Encyclical Letter of Pope Leo XIV</title>
+<title>Magnifica Humanitas · 壯麗的人性 · Encyclical Letter of Pope Leo XIV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
 body {
-  font-family: 'EB Garamond', 'Cormorant Garamond', 'Source Serif Pro', 'Times New Roman', serif;
+  font-family: 'EB Garamond', 'Source Serif Pro', 'Iowan Old Style', 'Times New Roman', serif;
   font-size: 18px; line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -36,7 +36,7 @@ a:hover { color: var(--cardinal); }
 .crest { font-size: 2rem; color: var(--gold); letter-spacing: .3rem; margin-bottom: .5rem; }
 .eyebrow { font-variant: small-caps; letter-spacing: .25em; color: var(--muted); font-size: .8rem; }
 .title-en {
-  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-family: 'EB Garamond', 'Source Serif Pro', serif;
   font-size: 3.2rem; font-weight: 600; letter-spacing: .03em;
   font-style: italic; margin: .5rem 0 .25rem;
 }
@@ -127,6 +127,10 @@ a.scripture {
   background: linear-gradient(transparent 70%, rgba(160,120,53,.18) 30%);
 }
 a.scripture:hover { color: var(--cardinal); border-bottom-color: var(--cardinal); }
+a.scripture:focus-visible {
+  outline: 2px solid var(--cardinal); outline-offset: 3px;
+  border-radius: 2px;
+}
 .popover {
   position: absolute; z-index: 50; max-width: 32rem;
   background: var(--paper); border: 1px solid var(--rule);
@@ -152,6 +156,18 @@ a.fnref {
   color: var(--cardinal); padding: 0 1px;
 }
 a.fnref:hover { text-decoration: underline; }
+a.fnref:focus-visible {
+  outline: 1.5px solid var(--cardinal); outline-offset: 2px;
+  border-radius: 2px;
+}
+.footnotes a.backref:focus-visible {
+  outline: 1.5px solid var(--cardinal); outline-offset: 2px;
+  border-radius: 2px;
+}
+nav.toc a:focus-visible {
+  outline: 1.5px solid var(--cardinal); outline-offset: 2px;
+  border-radius: 2px;
+}
 
 .pending {
   color: var(--muted); font-style: italic; font-family: 'Noto Serif TC', serif;
@@ -182,16 +198,23 @@ footer.colophon a { color: var(--cardinal); }
 
 aside.translators-note {
   max-width: 70rem; margin: 1.75rem auto 0;
-  border: 1px solid var(--rule); border-left: 3px solid var(--cardinal);
+  border: 1px solid var(--rule);
   background: var(--paper-deep);
-  padding: 1.1rem 1.4rem 1.2rem;
+  padding: 1.25rem 1.5rem 1.35rem;
   border-radius: 4px;
-  font-size: .9rem; line-height: 1.55;
+  font-size: .9rem; line-height: 1.6;
+  position: relative;
+}
+aside.translators-note::before {
+  content: "§"; position: absolute;
+  top: 1.1rem; left: 1.5rem;
+  color: var(--cardinal); font-size: 1.4rem; line-height: 1;
+  font-family: 'EB Garamond', 'Source Serif Pro', serif;
 }
 aside.translators-note .label {
   font-variant: small-caps; letter-spacing: .22em;
   color: var(--cardinal); font-weight: 600;
-  font-size: .78rem; margin-bottom: .65rem;
+  font-size: .78rem; margin: 0 0 .85rem 2rem;
   display: flex; gap: .75rem; align-items: baseline;
 }
 aside.translators-note .label .zh {
@@ -199,20 +222,26 @@ aside.translators-note .label .zh {
   font-family: 'Noto Serif TC', serif; font-weight: 700;
 }
 aside.translators-note .cols {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem;
 }
 aside.translators-note .cols .zh {
   font-family: 'Noto Serif TC', 'Source Han Serif TC', serif;
-  font-size: .92rem; line-height: 1.75;
+  font-size: .92rem; line-height: 1.8;
 }
-aside.translators-note p { margin: 0 0 .55rem; }
+aside.translators-note p { margin: 0 0 .6rem; }
 aside.translators-note p:last-child { margin-bottom: 0; }
 aside.translators-note strong { color: var(--ink); }
 aside.translators-note a { color: var(--cardinal); }
+aside.translators-note a:focus-visible {
+  outline: 2px solid var(--cardinal); outline-offset: 2px;
+}
 @media (max-width: 900px) {
-  aside.translators-note .cols { grid-template-columns: 1fr; gap: .9rem; }
+  aside.translators-note { padding-top: 1.1rem; }
+  aside.translators-note::before { display: none; }
+  aside.translators-note .label { margin-left: 0; }
+  aside.translators-note .cols { grid-template-columns: 1fr; gap: 1rem; }
   aside.translators-note .cols .zh {
-    border-top: 1px dashed var(--rule); padding-top: .85rem;
+    border-top: 1px dashed var(--rule); padding-top: .9rem;
   }
 }
 
@@ -222,11 +251,34 @@ aside.translators-note a { color: var(--cardinal); }
   .title-en { font-size: 2.2rem; }
   .title-zh { font-size: 1.6rem; }
 }
+
+@media print {
+  html, body { background: white; color: #111; }
+  body { font-size: 11pt; line-height: 1.5; }
+  .masthead { background: none; border-bottom: 0.5pt solid #888; padding: 1rem 0 1.5rem; }
+  .crest { font-size: 1.4rem; }
+  .title-en { font-size: 2rem; }
+  .title-zh { font-size: 1.4rem; }
+  nav.toc { background: none; page-break-after: always; }
+  aside.translators-note { background: none; border: 0.5pt solid #888; }
+  aside.translators-note::before { color: #555; }
+  .section { page-break-before: auto; }
+  .section-label, .section-title { color: #333; }
+  .para { page-break-inside: avoid; }
+  a, a:visited { color: #111; text-decoration: none; }
+  a.scripture { background: none; border-bottom: 0.5pt dotted #555; }
+  .popover { display: none !important; }
+  .footnotes, footer.colophon { font-size: 9pt; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
 </style>
 </head>
 <body>
 
-<header class="masthead">
+<header class="masthead" id="top">
   <div class="crest">✠</div>
   <div class="eyebrow">Encyclical Letter · 教宗通諭</div>
   <h1 class="title-en">MAGNIFICA HUMANITAS</h1>
@@ -246,23 +298,23 @@ aside.translators-note a { color: var(--cardinal); }
   </div>
   <div class="cols">
     <div class="en">
-      <p>This edition places the official Vatican English text alongside an <strong>unofficial, AI-assisted Traditional Chinese study translation</strong> rendered in Hong Kong Catholic terminology. The English text is the authoritative original; the Chinese rendering has <strong>not been reviewed by ecclesiastical authority</strong> and should not be used for liturgical, magisterial, or scholarly citation &mdash; please consult the Holy See for an official translation when one is published.</p>
-      <p><strong>Source.</strong> English text: <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a> &mdash; <em>Magnifica Humanitas</em>, Encyclical Letter of His Holiness Pope Leo XIV, 15 May 2026. &copy; Libreria Editrice Vaticana. Scripture in English: Berean Standard Bible (public domain). Scripture in Chinese: 思高聖經 (Studium Biblicum Version).</p>
+      <p>This edition places the official Vatican English text alongside an <strong>unofficial, AI&#8209;assisted Traditional Chinese study translation</strong> in Hong Kong Catholic terminology. The English text is the authoritative original. The Chinese rendering has <strong>not been reviewed by ecclesiastical authority</strong> and is not suitable for liturgical, magisterial, or scholarly citation; please consult the Holy See when an official translation is published.</p>
+      <p><strong>Source.</strong> English text from <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a>: <em>Magnifica Humanitas</em>, Encyclical Letter of His Holiness Pope Leo XIV, 15 May 2026. &copy; Libreria Editrice Vaticana. Scripture in English from the Berean Standard Bible (public domain); scripture in Chinese from 思高聖經 (Studium Biblicum Version).</p>
     </div>
     <div class="zh">
-      <p>本版以梵蒂岡英文官方本，並列呈現一份<strong>非官方、由人工智能輔助製作的繁體中文研讀翻譯</strong>，採用香港天主教用語。英文本為權威原文；中文翻譯<strong>未經教會權威審閱</strong>，不應用於禮儀、訓導或學術引用——請以聖座日後正式發布之譯本為準。</p>
-      <p><strong>來源。</strong>英文原文：<a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a>——教宗良十四世《壯麗的人性》通諭，二○二六年五月十五日。© 梵蒂岡教廷出版社版權所有。英文聖經引用：《貝雷亞標準聖經》（公有領域）；中文聖經引用：思高聖經學會《思高聖經》。</p>
+      <p>本版以梵蒂岡英文官方本，並列呈現一份<strong>非官方、由人工智能輔助製作的繁體中文研讀翻譯</strong>，採用香港天主教用語。英文本為權威原文；中文翻譯<strong>未經教會權威審閱</strong>，不適用於禮儀、訓導或學術引用；如需正式引用，請以聖座日後發布之譯本為準。</p>
+      <p><strong>來源。</strong>英文原文取自 <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a>：教宗良十四世《壯麗的人性》通諭，二○二六年五月十五日。© 梵蒂岡教廷出版社版權所有。英文聖經引用：《貝雷亞標準聖經》（公有領域）；中文聖經引用：思高聖經學會《思高聖經》。</p>
     </div>
   </div>
 </aside>
 
 <nav class="toc"><h2>Contents · 目錄</h2><ol><li><strong>INTRODUCTION</strong><span class="zh">引言</span></li>
-<li><strong>CHAPTER ONE</strong> — <em>A DYNAMIC APPROACH FAITHFUL TO THE GOSPEL</em><span class="zh">第一章 · 忠於福音的動態進路</span></li>
-<li><strong>CHAPTER TWO</strong> — <em>FOUNDATIONS AND PRINCIPLES OF THE SOCIAL DOCTRINE OF THE CHURCH</em><span class="zh">第二章 · 教會社會訓導的基礎與原則</span></li>
-<li><strong>CHAPTER THREE</strong> — <em>THE GRANDEUR OF HUMANITY IN LIGHT OF THE PROMISES OF AI</em><span class="zh">第三章 · 科技與宰制——人性的偉大與人工智能的諾言</span></li>
-<li><strong>CHAPTER FOUR</strong> — <em>TRUTH, WORK, FREEDOM</em><span class="zh">第四章 · 在劇變時代守護人性——真理、勞動、自由</span></li>
-<li><strong>CHAPTER FIVE</strong> — <em>THE CULTURE OF POWER AND THE CIVILIZATION OF LOVE</em><span class="zh">第五章 · 權力的文化與愛的文明</span></li>
-<li><strong>CONCLUSION</strong> — <em>The Word became flesh</em><span class="zh">結語 · 聖言成了血肉</span></li></ol></nav>
+<li><strong>CHAPTER ONE</strong> · <em>A DYNAMIC APPROACH FAITHFUL TO THE GOSPEL</em><span class="zh">第一章 · 忠於福音的動態進路</span></li>
+<li><strong>CHAPTER TWO</strong> · <em>FOUNDATIONS AND PRINCIPLES OF THE SOCIAL DOCTRINE OF THE CHURCH</em><span class="zh">第二章 · 教會社會訓導的基礎與原則</span></li>
+<li><strong>CHAPTER THREE</strong> · <em>THE GRANDEUR OF HUMANITY IN LIGHT OF THE PROMISES OF AI</em><span class="zh">第三章 · 科技與宰制——人性的偉大與人工智能的諾言</span></li>
+<li><strong>CHAPTER FOUR</strong> · <em>TRUTH, WORK, FREEDOM</em><span class="zh">第四章 · 在劇變時代守護人性——真理、勞動、自由</span></li>
+<li><strong>CHAPTER FIVE</strong> · <em>THE CULTURE OF POWER AND THE CIVILIZATION OF LOVE</em><span class="zh">第五章 · 權力的文化與愛的文明</span></li>
+<li><strong>CONCLUSION</strong> · <em>The Word became flesh</em><span class="zh">結語 · 聖言成了血肉</span></li></ol></nav>
 
 <main>
 <section class="section">
@@ -823,9 +875,8 @@ aside.translators-note a { color: var(--cardinal); }
 </ol></section>
 
 <footer class="colophon">
-<p><strong>Source</strong> · English text: <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">vatican.va</a> (official) &mdash; <em>Magnifica Humanitas</em>, Encyclical Letter of His Holiness Pope Leo XIV, 15 May 2026. &copy; Libreria Editrice Vaticana.</p>
-<p><strong>Chinese translation</strong> · <em>Unofficial, AI-assisted study translation</em> in Hong Kong Catholic terminology. Not a magisterial text and not reviewed by ecclesiastical authority. For liturgical or scholarly citation please await the official translation from the Holy See.</p>
-<p><strong>Scripture quotations</strong> · English passages from the <a href="https://bible.helloao.org" target="_blank" rel="noopener">Berean Standard Bible</a> (public domain) via the HelloAO Bible API. Chinese passages from <strong>思高聖經 (Studium Biblicum Version)</strong>, 思高聖經學會, Hong Kong.</p>
+<p><strong>Scripture provenance</strong> · English passages from the <a href="https://bible.helloao.org" target="_blank" rel="noopener">Berean Standard Bible</a> (public domain) via the HelloAO Bible API. Chinese passages from <strong>思高聖經 (Studium Biblicum Version)</strong>, 思高聖經學會, Hong Kong.</p>
+<p>See the <a href="#top">translator&rsquo;s note</a> above for source attribution and the unofficial&#8209;translation disclaimer.</p>
 <p style="margin-top:1rem">228 numbered paragraphs · 224 footnotes · 25 scripture lookups</p>
 </footer>
 
@@ -854,10 +905,10 @@ aside.translators-note a { color: var(--cardinal); }
     close.addEventListener('click', closePopover);
     pop.appendChild(close);
 
-    pop.appendChild(el('div', 'ref-header', refKey + ' — BSB (English)'));
+    pop.appendChild(el('div', 'ref-header', refKey + ' · BSB (English)'));
     pop.appendChild(el('div', 'ref-en', enEntry ? enEntry.text : 'Not found.'));
 
-    var zhHeaderText = (zhEntry ? zhEntry.zh_ref : refKey) + ' — 思高聖經';
+    var zhHeaderText = (zhEntry ? zhEntry.zh_ref : refKey) + ' · 思高聖經';
     pop.appendChild(el('div', 'ref-zh-header', zhHeaderText));
     pop.appendChild(el('div', 'ref-zh', zhEntry ? zhEntry.zh_text : '（思高本未提供）'));
     return pop;
