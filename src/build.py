@@ -48,9 +48,25 @@ def wrap_scripture(text: str) -> str:
 
 
 def wrap_footnote_refs(text: str) -> str:
+    """English-column footnote markers. Carries id="fnref-N" so the
+    footnote section's backref (↩) can navigate back to this anchor."""
     return re.sub(
         r"\[(\d+)\]",
         lambda m: f'<a href="#fn-{m.group(1)}" id="fnref-{m.group(1)}" class="fnref" role="doc-noteref">[{m.group(1)}]</a>',
+        text,
+    )
+
+
+def wrap_footnote_refs_zh(text: str) -> str:
+    """Chinese-column footnote markers. Same forward-navigation as the
+    English version, but without id="fnref-N" — the EN column already
+    owns that id, and HTML disallows duplicates. The single backref in
+    the footnote section returns to the EN column; full bilingual
+    backref symmetry would need per-language id suffixes plus paired
+    backref glyphs and is out of scope for this pass."""
+    return re.sub(
+        r"\[(\d+)\]",
+        lambda m: f'<a href="#fn-{m.group(1)}" class="fnref" role="doc-noteref">[{m.group(1)}]</a>',
         text,
     )
 
@@ -62,7 +78,7 @@ def render_en(text: str) -> str:
 def render_zh(text: str) -> str:
     if not text or not text.strip():
         return PLACEHOLDER_ZH
-    return text
+    return wrap_footnote_refs_zh(text)
 
 
 CSS = """
