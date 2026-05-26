@@ -411,7 +411,7 @@ page = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Magnifica Humanitas · 壯麗的人性 — Encyclical Letter of Pope Leo XIV</title>
+<title>Magnifica Humanitas · 偉大的人類 · Encyclical Letter of Pope Leo XIV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
