@@ -311,6 +311,120 @@ aside.tldr-note a:focus-visible {
   }
 }
 
+/* Glossary: collapsed-by-default reference panel between TOC and body.
+   Native <details>/<summary>; no JS. Two grouped definition lists
+   inside (Catholic terms + AI and technology). */
+details.glossary {
+  max-width: 70rem; margin: 1.25rem auto 0;
+  border: 1px solid var(--rule); background: var(--paper-deep);
+  border-radius: 4px;
+  font-size: var(--text-caption); line-height: 1.6;
+}
+details.glossary > summary {
+  list-style: none; cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-variant-caps: all-small-caps; letter-spacing: .22em;
+  color: var(--cardinal); font-weight: 600;
+  font-size: var(--text-label);
+  font-feature-settings: "smcp", "kern";
+  display: flex; align-items: baseline; gap: .75rem;
+}
+details.glossary > summary::-webkit-details-marker { display: none; }
+details.glossary > summary::before {
+  content: "\25b8"; /* ▸ small right-pointing triangle */
+  color: var(--cardinal); font-size: .85rem;
+  font-variant: normal; letter-spacing: 0;
+  transition: transform 200ms ease-out;
+  display: inline-block;
+}
+details.glossary[open] > summary::before { transform: rotate(90deg); }
+details.glossary > summary .zh {
+  font-variant: normal; letter-spacing: .05em;
+  font-family: 'Noto Serif TC', serif; font-weight: 700;
+}
+details.glossary > summary:focus-visible {
+  outline: 2px solid var(--cardinal); outline-offset: 2px;
+}
+.glossary-body {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+.glossary-intro {
+  margin: 1rem 0 1.25rem; color: var(--muted);
+  font-style: italic;
+}
+.glossary-intro .zh {
+  font-family: 'Noto Serif TC', serif; font-style: normal;
+  margin-left: .35rem;
+}
+.glossary-body h3 {
+  font-variant-caps: all-small-caps; letter-spacing: .22em;
+  color: var(--gold); font-weight: 600;
+  font-size: var(--text-label);
+  margin: 1.5rem 0 .85rem;
+  font-feature-settings: "smcp", "kern";
+  border-bottom: 1px dashed var(--rule); padding-bottom: .4rem;
+}
+.glossary-body h3 .zh {
+  font-variant: normal; letter-spacing: .05em;
+  font-family: 'Noto Serif TC', serif; font-weight: 700;
+  margin-left: .5rem; color: var(--ink);
+}
+.glossary-body dl { margin: 0; }
+.glossary-body .entry {
+  margin: 0 0 1.25rem; padding-bottom: 1.25rem;
+  border-bottom: 1px dotted var(--rule);
+}
+.glossary-body .entry:last-child {
+  border-bottom: none; margin-bottom: 0; padding-bottom: 0;
+}
+.glossary-body .term {
+  margin-bottom: .4rem;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .75rem;
+}
+.glossary-body .term .en {
+  font-style: italic; color: var(--cardinal); font-weight: 600;
+  font-size: var(--text-body);
+}
+.glossary-body .term .zh {
+  font-family: 'Noto Serif TC', serif; font-weight: 700;
+  color: var(--ink); font-size: var(--text-body);
+}
+.glossary-body .term .links {
+  font-size: var(--text-label); margin-left: auto;
+  letter-spacing: .12em;
+  font-variant-caps: all-small-caps; color: var(--muted);
+  font-feature-settings: "smcp", "kern";
+}
+.glossary-body .term .links a {
+  color: var(--link); text-decoration: none; margin: 0 .15rem;
+}
+.glossary-body .term .links a:hover { color: var(--cardinal); }
+.glossary-body .term .links a:focus-visible {
+  outline: 1.5px solid var(--cardinal); outline-offset: 2px; border-radius: 2px;
+}
+.glossary-body .def {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+}
+.glossary-body .def .zh {
+  font-family: 'Noto Serif TC', 'Source Han Serif TC', serif;
+  font-size: var(--text-caption); line-height: 1.8;
+}
+.glossary-body .def p { margin: 0; }
+.glossary-body .note {
+  margin-top: 1.25rem; padding-top: 1rem;
+  border-top: 1px dashed var(--rule);
+  color: var(--muted); font-size: var(--text-label);
+  font-style: italic; line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .glossary-body .def { grid-template-columns: 1fr; gap: .85rem; }
+  .glossary-body .def .zh {
+    border-top: 1px dashed var(--rule); padding-top: .8rem;
+  }
+  .glossary-body .term .links { margin-left: 0; flex-basis: 100%; }
+}
+
 @media (max-width: 900px) {
   .bilingual, .subhead { grid-template-columns: 1fr; }
   .col-zh { border-top: 1px dashed var(--rule); padding-top: 1.5rem; margin-top: 1rem; }
@@ -393,6 +507,217 @@ aside.tldr-note a:focus-visible {
 <li><strong>CHAPTER FOUR</strong> · <em>TRUTH, WORK, FREEDOM</em><span class="zh">第四章 · 在劇變時代守護人性——真理、勞動、自由</span></li>
 <li><strong>CHAPTER FIVE</strong> · <em>THE CULTURE OF POWER AND THE CIVILIZATION OF LOVE</em><span class="zh">第五章 · 權力的文化與愛的文明</span></li>
 <li><strong>CONCLUSION</strong> · <em>The Word became flesh</em><span class="zh">結語 · 聖言成了血肉</span></li></ol></nav>
+
+<details class="glossary" id="glossary">
+  <summary><span>Key Concepts</span><span class="zh">重要概念</span></summary>
+  <div class="glossary-body">
+    <p class="glossary-intro">Brief Wikipedia-grounded references for readers new to either Catholic theology or AI terminology.<span class="zh">為對天主教神學或人工智能不熟悉的讀者所提供的簡要參考。</span></p>
+
+    <h3><span>Catholic terms</span><span class="zh">天主教用語</span></h3>
+    <dl>
+      <div class="entry">
+        <div class="term">
+          <span class="en">Encyclical</span>
+          <span class="zh">通諭</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Encyclical" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E9%80%9A%E8%AB%AD" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">A circular letter from the Pope, traditionally addressed to bishops but often, as here, extended to all the faithful and people of goodwill. One of the highest forms of ordinary papal teaching.</p>
+          <p class="zh">教宗發出的公開信函，傳統上致主教，而如本文常擴展至全體信友及所有善心人士。屬教宗一般訓導中規格較高的一種。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Catholic Social Teaching</span>
+          <span class="zh">教會社會訓導</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Catholic_social_teaching" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E5%A4%A9%E4%B8%BB%E6%95%99%E7%A4%BE%E6%9C%83%E8%A8%93%E5%B0%8E" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">The body of Catholic moral teaching on social, political, and economic life, developed over 135 years through papal encyclicals beginning with <em>Rerum Novarum</em> (1891). <em>Magnifica Humanitas</em> extends this tradition to AI.</p>
+          <p class="zh">教會自《新事》通諭（1891 年）以來，藉教宗通諭等訓導文件所發展、關於社會、政治與經濟生活的倫理訓導體系。《偉大的人類》將此傳統延伸至人工智能領域。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en"><em>Rerum Novarum</em> (1891)</span>
+          <span class="zh">《新事》通諭</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Rerum_novarum" target="_blank" rel="noopener">EN</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">Pope Leo XIII&rsquo;s encyclical on labor, capital, and the social order, written during the upheavals of industrialization. The founding document of modern Catholic Social Teaching; <em>Magnifica Humanitas</em> marks its 135th anniversary.</p>
+          <p class="zh">教宗良十三世於工業革命動盪時期所頒，論勞動、資本與社會秩序的通諭。現代教會社會訓導的奠基文獻；《偉大的人類》正值其頒布一百三十五週年。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Common good</span>
+          <span class="zh">公益</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Common_good#Catholic_social_thought" target="_blank" rel="noopener">EN</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">A core principle of Catholic Social Teaching: the conditions of social life that allow groups and individuals to reach their fulfillment more fully and easily. Not the same as &ldquo;majority benefit.&rdquo;</p>
+          <p class="zh">教會社會訓導的核心原則：使團體或個人得以更完滿、更輕易達致圓滿之社會條件的總和。與「多數人利益」並不相同。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Subsidiarity</span>
+          <span class="zh">輔助性原則</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Subsidiarity_(Catholicism)" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E8%BC%94%E5%8A%A9%E6%80%A7%E5%8E%9F%E5%89%87" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">Decisions should be made at the most local level competent to make them; higher authorities should support, not replace, smaller bodies. The encyclical argues that in the digital age the &ldquo;highest level&rdquo; is no longer the State but transnational tech firms (&para;71).</p>
+          <p class="zh">決策應由最能勝任的最基層作出；更高的權威應協助而非取代較小的單位。本通諭指出，在數碼時代，這個「最高層」已不是國家，而是跨國科技公司（¶71）。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Tower of Babel</span>
+          <span class="zh">巴貝耳塔</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Tower_of_Babel" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E5%B7%B4%E5%88%A5%E5%A1%94" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">The biblical story (Gen 11) in which humanity, unified by one language, builds a tower to reach heaven; God confounds their language and scatters them. The encyclical uses it as the negative pole: technology in service of pride, control, and a single flattening logic.</p>
+          <p class="zh">聖經（創 11）所載：人類本操同一語言，欲建塔通天；天主混亂其語言，將之分散。本通諭以此為負面意象：科技服務於驕傲、控制與抹平差異的單一邏輯。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Nehemiah</span>
+          <span class="zh">乃赫米雅</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Nehemiah" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E5%B0%BC%E5%B8%8C%E7%B1%B3" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">A Hebrew official in the Persian court (5th c. BCE) who returned to Jerusalem and organized the rebuilding of the city&rsquo;s walls. The encyclical uses his slow, communal, prayerful project as the positive counter-image to Babel.</p>
+          <p class="zh">公元前五世紀波斯朝廷的猶太官員，後返回耶路撒冷主持重建城牆。本通諭以其緩慢、共議、寓於祈禱的工程，作為巴貝耳塔的正面對照意象。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Incarnation</span>
+          <span class="zh">降生奧蹟 / 聖言成了血肉</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Incarnation_(Christianity)" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E9%81%93%E6%88%90%E8%82%89%E8%BA%AB" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">The central Christian doctrine that God the Son took on human flesh in Jesus Christ &mdash; fully divine, fully human. In the encyclical&rsquo;s conclusion this is the answer to transhumanism: humanity is dignified by God&rsquo;s having entered it, not by being engineered beyond it (&para;231&ndash;233).</p>
+          <p class="zh">基督宗教核心信理：聖子在耶穌基督內取得人的血肉，全然是天主，亦全然是人。本通諭結尾以此回應超人類主義：人性的尊嚴來自天主的降生其中，而非藉工程超越其外（¶231–233）。</p>
+        </div>
+      </div>
+    </dl>
+
+    <h3><span>AI and technology</span><span class="zh">人工智能與科技</span></h3>
+    <dl>
+      <div class="entry">
+        <div class="term">
+          <span class="en">Artificial intelligence</span>
+          <span class="zh">人工智能</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">Computer systems that perform tasks usually requiring human cognition: recognizing speech, generating text, making decisions. The encyclical insists this is not the same as human intelligence; systems only imitate certain functions of it (&para;99).</p>
+          <p class="zh">執行通常需要人類認知能力的電腦系統：語音識別、文本生成、決策等。本通諭堅持這並非人類智能，系統僅模仿其某些功能（¶99）。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">AI alignment</span>
+          <span class="zh">人工智能對齊</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/AI_alignment" target="_blank" rel="noopener">EN</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">The technical and ethical project of making AI systems pursue goals that match human values. The encyclical argues alignment cannot be achieved by engineering alone &mdash; the ethical frameworks themselves must be openly debated (&para;107).</p>
+          <p class="zh">使人工智能系統的目標與人性價值一致的技術與倫理工程。本通諭主張此事不能單靠工程達成——倫理框架本身必須公開辯論（¶107）。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Transhumanism</span>
+          <span class="zh">超人類主義</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Transhumanism" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E8%B6%85%E4%BA%BA%E9%A1%9E%E4%B8%BB%E7%BE%A9" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">A movement holding that humanity should use technology to transcend biological limits &mdash; overcoming aging, illness, and the present human condition. The encyclical critiques it as treating the human as something to be perfected or surpassed (&para;115&ndash;117).</p>
+          <p class="zh">主張人類應運用科技超越生物極限——克服老化、疾病及當下人的處境——的思潮。本通諭批判其將人視為待完善或待超越者（¶115–117）。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Technocratic paradigm</span>
+          <span class="zh">科技至上典範</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Laudato_si%27" target="_blank" rel="noopener">EN</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">A term coined by Pope Francis (<em>Laudato Si&rsquo;</em>, 2015) for the worldview in which the logic of efficiency, control, and profit alone shapes personal, social, and economic decisions. <em>Magnifica Humanitas</em> extends this critique to AI.</p>
+          <p class="zh">教宗方濟各於《願祢受讚頌》通諭（2015）所提出之概念：在此世界觀中，效率、控制與利益的邏輯主導了個人、社會與經濟的一切決定。《偉大的人類》將此批判延伸至人工智能領域。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Lethal autonomous weapons</span>
+          <span class="zh">自主武器系統</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Lethal_autonomous_weapon" target="_blank" rel="noopener">EN</a>&middot;<a href="https://zh.wikipedia.org/zh-hk/%E8%87%B4%E5%91%BD%E6%80%A7%E8%87%AA%E4%B8%BB%E6%AD%A6%E5%99%A8" target="_blank" rel="noopener">ZH</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">Weapons that can select and engage targets without direct human intervention. The encyclical insists on traceable decision-making and rejects the framing of &ldquo;artificial moral agents&rdquo;: moral judgment cannot be reduced to calculation (&para;197&ndash;200).</p>
+          <p class="zh">無需人類直接介入便可選擇並攻擊目標的武器。本通諭堅持決策過程必須可追溯，並拒絕「人造道德主體」之提法：道德判斷不能化約為計算（¶197–200）。</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="term">
+          <span class="en">Data colonialism</span>
+          <span class="zh">數據殖民主義</span>
+          <span class="links">
+            <a href="https://en.wikipedia.org/wiki/Data_colonialism" target="_blank" rel="noopener">EN</a>
+          </span>
+        </div>
+        <div class="def">
+          <p class="en">A framework describing how digital systems extract personal data from populations (especially in the Global South) as a 21st-century analog to historical colonial resource extraction. Named explicitly in &para;178.</p>
+          <p class="zh">描述數碼系統如何從全球（尤其南半球）人口中抽取個人數據之框架，視為廿一世紀的殖民式資源開採之對應物。本通諭於 ¶178 明確點名。</p>
+        </div>
+      </div>
+    </dl>
+
+    <p class="note">Chinese Wikipedia uses some terminology that differs from Hong Kong Catholic usage (e.g. 巴別塔 vs 巴貝耳塔, 尼希米 vs 乃赫米雅, 道成肉身 vs 聖言成了血肉). The articles still cover the same concepts; only the surface wording shifts.<br><span class="zh">中文維基百科所用部分譯名與香港天主教用語有別（如「巴別塔」對「巴貝耳塔」、「尼希米」對「乃赫米雅」、「道成肉身」對「聖言成了血肉」），所述概念則一致，僅字面有異。</span></p>
+  </div>
+</details>
 
 <main>
 <section class="section">
