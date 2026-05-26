@@ -1,0 +1,152 @@
+[
+  {
+    "book": "1 Cor",
+    "chapter": "12",
+    "verse_start": "27",
+    "verse_end": ""
+  },
+  {
+    "book": "1 Cor",
+    "chapter": "3",
+    "verse_start": "10",
+    "verse_end": ""
+  },
+  {
+    "book": "1 Pet",
+    "chapter": "2",
+    "verse_start": "4",
+    "verse_end": "6"
+  },
+  {
+    "book": "2 Cor",
+    "chapter": "12",
+    "verse_start": "9",
+    "verse_end": ""
+  },
+  {
+    "book": "2 Cor",
+    "chapter": "5",
+    "verse_start": "17",
+    "verse_end": ""
+  },
+  {
+    "book": "Acts",
+    "chapter": "4",
+    "verse_start": "32",
+    "verse_end": ""
+  },
+  {
+    "book": "Acts",
+    "chapter": "4",
+    "verse_start": "34",
+    "verse_end": ""
+  },
+  {
+    "book": "Eph",
+    "chapter": "1",
+    "verse_start": "10",
+    "verse_end": ""
+  },
+  {
+    "book": "Eph",
+    "chapter": "4",
+    "verse_start": "4",
+    "verse_end": ""
+  },
+  {
+    "book": "Gen",
+    "chapter": "1",
+    "verse_start": "26",
+    "verse_end": "27"
+  },
+  {
+    "book": "Gen",
+    "chapter": "11",
+    "verse_start": "1",
+    "verse_end": "9"
+  },
+  {
+    "book": "Gen",
+    "chapter": "11",
+    "verse_start": "4",
+    "verse_end": ""
+  },
+  {
+    "book": "Is",
+    "chapter": "43",
+    "verse_start": "19",
+    "verse_end": ""
+  },
+  {
+    "book": "Jn",
+    "chapter": "1",
+    "verse_start": "5",
+    "verse_end": ""
+  },
+  {
+    "book": "Jn",
+    "chapter": "10",
+    "verse_start": "10",
+    "verse_end": ""
+  },
+  {
+    "book": "Lk",
+    "chapter": "4",
+    "verse_start": "18",
+    "verse_end": ""
+  },
+  {
+    "book": "Mk",
+    "chapter": "4",
+    "verse_start": "26",
+    "verse_end": "32"
+  },
+  {
+    "book": "Mt",
+    "chapter": "25",
+    "verse_start": "14",
+    "verse_end": "30"
+  },
+  {
+    "book": "Mt",
+    "chapter": "25",
+    "verse_start": "31",
+    "verse_end": "46"
+  },
+  {
+    "book": "Mt",
+    "chapter": "28",
+    "verse_start": "18",
+    "verse_end": ""
+  },
+  {
+    "book": "Prov",
+    "chapter": "8",
+    "verse_start": "22",
+    "verse_end": "31"
+  },
+  {
+    "book": "Ps",
+    "chapter": "84",
+    "verse_start": "11",
+    "verse_end": ""
+  },
+  {
+    "book": "Ps",
+    "chapter": "85",
+    "verse_start": "10",
+    "verse_end": ""
+  },
+  {
+    "book": "Rev",
+    "chapter": "21",
+    "verse_start": "2",
+    "verse_end": ""
+  },
+  {
+    "book": "Rev",
+    "chapter": "22",
+    "verse_start": "2",
+    "verse_end": ""
+  }
+]
