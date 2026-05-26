@@ -14,27 +14,101 @@ scr_zh = json.loads((DATA / "scriptures_zh.json").read_text(encoding="utf-8"))
 
 PLACEHOLDER_ZH = '<span class="pending">［中文翻譯進行中 · translation in progress］</span>'
 
-BOOK_RE = (
-    r"\b(Gen|Ex|Lev|Num|Deut|Dt|Josh|Jos|Judg|Jdg|Ruth|Rt|"
+# English book abbreviations (Vatican/Catholic + common Protestant variants).
+EN_BOOK_RE = (
+    r"Gen|Ex|Lev|Num|Deut|Dt|Josh|Jos|Judg|Jdg|Ruth|Rt|"
     r"1 Sam|2 Sam|1 Kgs|2 Kgs|1 Chron|2 Chron|1 Chr|2 Chr|"
     r"Ezra|Neh|Tob|Jdt|Esth|Est|1 Mac|2 Mac|1 Macc|2 Macc|"
     r"Job|Ps|Prov|Eccl|Qoh|Song|Cant|Wis|Sir|Isa|Is|Jer|Lam|Bar|Ezek|Ez|Dan|"
     r"Hos|Joel|Amos|Am|Obad|Jon|Mic|Mi|Nah|Hab|Zeph|Zep|Hag|Zech|Zec|Mal|"
     r"Mt|Mk|Lk|Jn|Acts|Rom|1 Cor|2 Cor|Gal|Eph|Phil|Phlp|Col|"
     r"1 Thess|2 Thess|1 Tim|2 Tim|Tit|Phlm|Phm|Heb|"
-    r"Jas|1 Pet|2 Pet|1 Jn|2 Jn|3 Jn|Jude|Rev|Apoc)"
+    r"Jas|1 Pet|2 Pet|1 Jn|2 Jn|3 Jn|Jude|Rev|Apoc"
 )
-REF_RE = re.compile(BOOK_RE + r"\s+(\d{1,3})(?::|,\s*)(\d{1,3})(?:[–—\-](\d{1,3}))?")
+
+# Chinese (思高) book abbreviations, derived from the zh_ref values in scriptures_zh.json
+# so additions to the lookup table automatically extend the regex. Longest first so
+# "厄下" matches before "厄" (no current collision, but defensive).
+#
+# Where 思高 numbering differs from the encyclical's Hebrew/English numbering — e.g.
+# the Psalter, whose superscription is counted as verse 1 in 思高, shifting every
+# Psalm verse by +1 — the zh_ref carries an explanatory parenthetical. We strip
+# the parenthetical for matching, and we also synthesise an alias of the form
+# "<zh_book> <en_chap_verse>" so the encyclical text (which uses Hebrew numbering)
+# still resolves to the lookup key.
+def _build_zh_ref_map():
+    out = {}
+    for key, val in scr_zh.items():
+        if key == "_meta" or not isinstance(val, dict) or "zh_ref" not in val:
+            continue
+        raw = val["zh_ref"]
+        canon = re.sub(r"\s*[（(].*", "", raw).strip()
+        out[canon] = key
+        zh_book = canon.split(" ", 1)[0] if " " in canon else canon
+        en_tail = key.split(" ", 1)[1] if " " in key else ""
+        if en_tail:
+            out.setdefault(f"{zh_book} {en_tail}", key)
+    return out
+
+
+_ZH_REF_TO_KEY = _build_zh_ref_map()
+_ZH_BOOKS = sorted({zh_ref.split(" ", 1)[0] for zh_ref in _ZH_REF_TO_KEY}, key=len, reverse=True)
+ZH_BOOK_RE = "|".join(re.escape(b) for b in _ZH_BOOKS) if _ZH_BOOKS else r"(?!x)x"  # never matches if empty
+
+# Unified regex: matches either an English-form ref or a Chinese-form ref, in either
+# chapter:verse[-verse] or chapter-chapter range form. The EN branch keeps a leading
+# word boundary; the ZH branch can't (Han characters aren't \w word chars).
+REF_RE = re.compile(
+    # English branch
+    r"\b(?P<en_book>" + EN_BOOK_RE + r")"
+    r"\s+(?:"
+    r"(?P<en_chap>\d{1,3})(?::|,\s*)(?P<en_vs>\d{1,3})(?:[–—\-](?P<en_ve>\d{1,3}))?"
+    r"|"
+    r"(?P<en_c1>\d{1,3})[–—\-](?P<en_c2>\d{1,3})(?![:\d])"
+    r")"
+    r"|"
+    # Chinese branch
+    r"(?P<zh_book>" + ZH_BOOK_RE + r")"
+    r"\s*(?:"
+    r"(?P<zh_chap>\d{1,3})[:：](?P<zh_vs>\d{1,3})(?:[–—\-](?P<zh_ve>\d{1,3}))?"
+    r"|"
+    r"(?P<zh_c1>\d{1,3})[–—\-](?P<zh_c2>\d{1,3})(?![:：\d])"
+    r")"
+)
+
+
+def _ref_to_key(m: "re.Match") -> str | None:
+    """Resolve a REF_RE match to the canonical lookup key (English form).
+    Returns None if no usable key was produced."""
+    if m.group("en_book"):
+        book = m.group("en_book")
+        if m.group("en_chap"):
+            key = f"{book} {m.group('en_chap')}:{m.group('en_vs')}"
+            if m.group("en_ve"):
+                key += f"-{m.group('en_ve')}"
+        else:
+            key = f"{book} {m.group('en_c1')}-{m.group('en_c2')}"
+        return key
+    if m.group("zh_book"):
+        book = m.group("zh_book")
+        if m.group("zh_chap"):
+            zh_ref = f"{book} {m.group('zh_chap')}:{m.group('zh_vs')}"
+            if m.group("zh_ve"):
+                zh_ref += f"-{m.group('zh_ve')}"
+        else:
+            zh_ref = f"{book} {m.group('zh_c1')}-{m.group('zh_c2')}"
+        return _ZH_REF_TO_KEY.get(zh_ref)
+    return None
 
 
 def wrap_scripture(text: str) -> str:
+    """Wrap every recognised scripture ref (EN or ZH) into a popover anchor."""
     out, last = [], 0
     for m in REF_RE.finditer(text):
         out.append(html_lib.escape(text[last:m.start()]))
-        book, chap, vs, ve = m.group(1), m.group(2), m.group(3), (m.group(4) or "")
-        key = f"{book} {chap}:{vs}" + (f"-{ve}" if ve else "")
+        key = _ref_to_key(m)
         disp = m.group(0)
-        if key in scr_en:
+        if key and key in scr_en:
             out.append(
                 f'<a href="#" class="scripture" '
                 f'data-ref="{html_lib.escape(key, quote=True)}" '
@@ -78,7 +152,7 @@ def render_en(text: str) -> str:
 def render_zh(text: str) -> str:
     if not text or not text.strip():
         return PLACEHOLDER_ZH
-    return wrap_footnote_refs_zh(text)
+    return wrap_footnote_refs_zh(wrap_scripture(text))
 
 
 CSS = """
