@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-26T02:55:00Z",
+  "title": "Design System: Magnifica Humanitas (Bilingual Edition)",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Black",
+        "canonical": "oklch(0.18 0.008 60)",
+        "tonalRamp": [
+          "#0d0c0a", "#1c1916", "#2e2924", "#443d35",
+          "#5e554a", "#7b7060", "#998b78", "#bbac96"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Cream",
+        "canonical": "oklch(0.97 0.018 80)",
+        "tonalRamp": [
+          "#3b372e", "#5b5648", "#7e7864", "#a59c83",
+          "#c8bea2", "#e3d9bf", "#f5efe0", "#fbf7ec"
+        ]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Deeper Cream",
+        "canonical": "oklch(0.94 0.022 80)",
+        "tonalRamp": [
+          "#3a3527", "#5a5340", "#7c735b", "#a4977a",
+          "#c8bb9c", "#e3d6b4", "#f0e8d2", "#f5efe0"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule Line",
+        "canonical": "oklch(0.85 0.04 80)",
+        "tonalRamp": [
+          "#534a36", "#74694f", "#94886a", "#b3a684",
+          "#cbc09b", "#d9cfb6", "#e6dec9", "#f1ebdc"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Manuscript Gold",
+        "canonical": "oklch(0.62 0.10 75)",
+        "tonalRamp": [
+          "#3f2d12", "#583f1c", "#705028", "#876236",
+          "#a07835", "#b89055", "#cfa977", "#e2c39e"
+        ]
+      },
+      "cardinal": {
+        "role": "primary",
+        "displayName": "Magisterial Cardinal",
+        "canonical": "oklch(0.41 0.16 28)",
+        "tonalRamp": [
+          "#3b0b0e", "#561013", "#701519", "#8b1a1f",
+          "#a83438", "#c25457", "#d77a7d", "#e8a4a7"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Stone",
+        "canonical": "oklch(0.52 0.022 75)",
+        "tonalRamp": [
+          "#33301f", "#4b4534", "#615b48", "#766f5e",
+          "#7b7060", "#94897a", "#aea495", "#cac1b3"
+        ]
+      },
+      "link": {
+        "role": "primary",
+        "displayName": "Linked Brown",
+        "canonical": "oklch(0.38 0.06 50)",
+        "tonalRamp": [
+          "#2b1a07", "#3e260f", "#502f15", "#5a3a1f",
+          "#704c2c", "#8a653e", "#a48155", "#bd9e74"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (English)",
+        "purpose": "Masthead title only. Italic EB Garamond at 3.2rem. The document's one typographic flourish."
+      },
+      "display-zh": {
+        "displayName": "Display (Chinese)",
+        "purpose": "Masthead Chinese title. 700-weight Noto Serif TC at 2.2rem, sized smaller than English per the source-language hierarchy."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section and chapter titles within the body. Italic EB Garamond, 1.7rem."
+      },
+      "title": {
+        "displayName": "Title (Subhead)",
+        "purpose": "Bilingual subhead rows across both columns. 1.25rem italic Garamond; cardinal-colored on English, plain Ming-style on Chinese."
+      },
+      "body": {
+        "displayName": "Body (English)",
+        "purpose": "English column body type. 18px EB Garamond, line-height 1.65. Justified with hyphens-auto. Line length ~70ch within the bilingual grid."
+      },
+      "body-zh": {
+        "displayName": "Body (Chinese)",
+        "purpose": "Chinese column body type. 17.5px Noto Serif TC, line-height 1.95. Justified with inter-ideograph spacing."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "All chrome labels. Small-caps EB Garamond at 0.78rem with 0.22em tracking, cardinal-colored."
+      }
+    },
+    "shadows": [
+      {
+        "name": "popover-rest",
+        "value": "0 8px 30px rgba(28, 25, 22, 0.18)",
+        "purpose": "The system's single resting shadow. Renders only on the scripture popover, never on cards or chrome."
+      }
+    ],
+    "motion": [
+      {
+        "name": "hover-color",
+        "value": "color 150ms ease-out, border-color 150ms ease-out",
+        "purpose": "The only motion in the system. Used for link / scripture / footnote hover transitions. Disabled by prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Translator's Note",
+      "kind": "custom",
+      "refersTo": "translators-note",
+      "description": "Above-the-fold bilingual disclaimer panel with leading section mark. Replaces what would otherwise be a forbidden side-stripe border with a § glyph at top-left.",
+      "html": "<aside class=\"ds-translators-note\"><div class=\"ds-tn-label\"><span>Translator&rsquo;s Note &amp; Source</span><span class=\"zh\">譯者按與來源</span></div><div class=\"ds-tn-cols\"><div class=\"ds-tn-en\"><p>This edition places the official Vatican English text alongside an <strong>unofficial, AI&#8209;assisted</strong> Traditional Chinese study translation. The English text is the authoritative original.</p></div><div class=\"ds-tn-zh\"><p>本版以梵蒂岡英文官方本，並列呈現一份<strong>非官方、由人工智能輔助製作的</strong>繁體中文研讀翻譯。英文本為權威原文。</p></div></div></aside>",
+      "css": ".ds-translators-note { max-width: 70rem; margin: 1.75rem auto 0; border: 1px solid #d9cfb6; background: #f5efe0; padding: 1.25rem 1.5rem 1.35rem; border-radius: 4px; font-family: 'EB Garamond', 'Source Serif Pro', serif; font-size: 0.9rem; line-height: 1.6; color: #1c1916; position: relative; } .ds-translators-note::before { content: '§'; position: absolute; top: 1.1rem; left: 1.5rem; color: #8b1a1f; font-size: 1.4rem; line-height: 1; font-style: italic; } .ds-tn-label { font-variant: small-caps; letter-spacing: 0.22em; color: #8b1a1f; font-weight: 600; font-size: 0.78rem; margin: 0 0 0.85rem 2rem; display: flex; gap: 0.75rem; align-items: baseline; } .ds-tn-label .zh { font-variant: normal; letter-spacing: 0.05em; font-family: 'Noto Serif TC', serif; font-weight: 700; } .ds-tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; } .ds-tn-zh { font-family: 'Noto Serif TC', serif; font-size: 0.92rem; line-height: 1.8; } .ds-translators-note p { margin: 0; } .ds-translators-note strong { color: #1c1916; }"
+    },
+    {
+      "name": "Bilingual Paragraph Row",
+      "kind": "custom",
+      "refersTo": "paragraph-number",
+      "description": "A numbered paragraph row in the parallel-text bilingual grid. The Loeb / classical-edition convention: gold paragraph number in tracked small-caps in the left gutter, body text justified beside it, both columns aligned across.",
+      "html": "<div class=\"ds-bilingual\"><div class=\"ds-col\"><div class=\"ds-para\"><div class=\"ds-num\">¶ 1</div><div class=\"ds-body\">Humanity, created by God in all its grandeur, is today facing a pivotal choice: to construct a new Tower of Babel, or to build the city in which God and humanity dwell together.</div></div></div><div class=\"ds-col ds-col-zh\"><div class=\"ds-para\"><div class=\"ds-num\">¶ 1</div><div class=\"ds-body\">天主在祂的全部壯麗中所創造的人類，今日正面臨一個關鍵的抉擇：是要興建一座新的「巴貝耳塔」，還是要建設一座天主與人共居的城。</div></div></div></div>",
+      "css": ".ds-bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; font-family: 'EB Garamond', 'Source Serif Pro', serif; color: #1c1916; } .ds-col-zh { font-family: 'Noto Serif TC', serif; font-size: 17.5px; line-height: 1.95; } .ds-col:not(.ds-col-zh) { font-size: 18px; line-height: 1.65; } .ds-para { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0.5rem; align-items: baseline; } .ds-num { text-align: right; color: #a07835; font-size: 0.82rem; padding-top: 0.4rem; font-variant: small-caps; letter-spacing: 0.05em; user-select: none; } .ds-body { text-align: justify; hyphens: auto; } .ds-col-zh .ds-body { text-justify: inter-ideograph; }"
+    },
+    {
+      "name": "Scripture Link",
+      "kind": "custom",
+      "refersTo": "scripture-link",
+      "description": "Inline scripture citation anchor. Dotted gold underline plus a low-opacity yellow highlight wash under the bottom 30% of the text. Hover and focus shift to Magisterial Cardinal.",
+      "html": "<p style=\"font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.65; color: #1c1916; max-width: 32rem;\">A skilled craftsman at His side (cf. <a href=\"#\" class=\"ds-scripture\">Prov 8:22-31</a>), rejoicing always in His presence.</p>",
+      "css": ".ds-scripture { text-decoration: none; border-bottom: 1px dotted #a07835; color: #1c1916; cursor: pointer; padding: 0 1px; background: linear-gradient(transparent 70%, rgba(160,120,53,0.18) 30%); transition: color 150ms ease-out, border-color 150ms ease-out; } .ds-scripture:hover { color: #8b1a1f; border-bottom-color: #8b1a1f; } .ds-scripture:focus-visible { outline: 2px solid #8b1a1f; outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Footnote Reference",
+      "kind": "custom",
+      "refersTo": "footnote-ref",
+      "description": "Superscript anchor marking a footnote. Default: cardinal, no underline. Hover: underline. Focus-visible: cardinal outline.",
+      "html": "<p style=\"font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.65; color: #1c1916; max-width: 32rem;\">It is &ldquo;only in the mystery of the Word made flesh that the mystery of humanity truly becomes clear.&rdquo;<a href=\"#fn-1\" class=\"ds-fnref\" role=\"doc-noteref\">[1]</a></p>",
+      "css": ".ds-fnref { font-size: 0.7em; vertical-align: super; text-decoration: none; color: #8b1a1f; padding: 0 1px; transition: color 150ms ease-out; } .ds-fnref:hover { text-decoration: underline; } .ds-fnref:focus-visible { outline: 1.5px solid #8b1a1f; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "The system's chrome label primitive: small-caps tracked Garamond in Magisterial Cardinal, with a bilingual partner in a 700-weight Chinese Ming-style face. Used for TOC headings, translator's-note label, section dividers, colophon labels.",
+      "html": "<div class=\"ds-label\"><span>Translator&rsquo;s Note &amp; Source</span><span class=\"zh\">譯者按與來源</span></div>",
+      "css": ".ds-label { font-variant: small-caps; letter-spacing: 0.22em; color: #8b1a1f; font-weight: 600; font-size: 0.78rem; font-family: 'EB Garamond', serif; display: flex; gap: 0.75rem; align-items: baseline; } .ds-label .zh { font-variant: normal; letter-spacing: 0.05em; font-family: 'Noto Serif TC', serif; font-weight: 700; }"
+    },
+    {
+      "name": "Scripture Popover",
+      "kind": "custom",
+      "refersTo": "popover",
+      "description": "The system's only shadowed surface. Renders BSB English and 思高聖經 Chinese passages with bilingual cardinal-labeled headers.",
+      "html": "<div class=\"ds-popover\" role=\"dialog\"><button class=\"ds-popover-close\" aria-label=\"Close\">×</button><div class=\"ds-popover-header\">Prov 8:22-31 · BSB (English)</div><div class=\"ds-popover-en\">The LORD created me as His first course, before His works of old…</div><div class=\"ds-popover-header-zh\">箴 8:22-31 · 思高聖經</div><div class=\"ds-popover-zh\">上主自始即拿我作他行動的起始，作他作為的開端：</div></div>",
+      "css": ".ds-popover { max-width: 32rem; background: #fbf7ec; border: 1px solid #d9cfb6; box-shadow: 0 8px 30px rgba(28, 25, 22, 0.18); border-radius: 4px; padding: 1rem 1.1rem; font-family: 'EB Garamond', serif; font-size: 0.92rem; line-height: 1.55; color: #1c1916; position: relative; } .ds-popover-close { position: absolute; top: 0.4rem; right: 0.6rem; color: #7b7060; background: none; border: none; font-size: 1.2rem; cursor: pointer; line-height: 1; transition: color 150ms ease-out; } .ds-popover-close:hover { color: #8b1a1f; } .ds-popover-header { font-variant: small-caps; letter-spacing: 0.15em; color: #8b1a1f; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem; } .ds-popover-en { margin-bottom: 0.75rem; font-style: italic; } .ds-popover-header-zh { font-family: 'Noto Serif TC', serif; font-variant: normal; font-weight: 700; color: #8b1a1f; font-size: 0.85rem; margin: 0.75rem 0 0.25rem; padding-top: 0.5rem; border-top: 1px dashed #d9cfb6; } .ds-popover-zh { font-family: 'Noto Serif TC', serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Loeb Edition for the AI Age",
+    "overview": "This is the visual system for a single document presented as a critical edition. The reference is a Loeb Classical Library volume, transplanted into 2026: parallel bilingual text (English / Traditional Chinese) as the entire reading surface, generous typography set in EB Garamond and Noto Serif TC, paragraph numbering, footnote apparatus, and interactive scripture cross-references that resolve in both languages. The apparatus is the design; decoration is what the apparatus doesn't need.\n\nThe palette is a warm-cream paper with a single magisterial cardinal accent, plus manuscript gold for paragraph numbers and rule lines. Surfaces are flat. Motion is essentially absent. Layout is the strict two-column bilingual grid that the Loeb format made famous, the same one Vatican Polyglot Press editions have used for centuries.\n\nWhat this system explicitly rejects: AI/SaaS landing-page aesthetics, generic Wikipedia/Project Gutenberg plain-text indifference, megachurch web stock-photo warmth, and the currently-saturated Notion/Substack editorial-typographic clone. The lineage we are in (Loeb, Vatican Polyglot) is the original this trend imitates; the design should read as the source, not the copy.",
+    "keyCharacteristics": [
+      "Bilingual two-column parallel-text grid is the entire UX",
+      "Cream paper background, never pure white",
+      "A single magisterial cardinal accent, used sparingly on labels, links, focus rings, and the leading section mark",
+      "Manuscript-gold paragraph numbers in tracked small-caps, in the left gutter",
+      "No buttons, no forms, no cards, no shadows except one popover",
+      "No motion beyond hover color changes; prefers-reduced-motion strips even those"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Magisterial Cardinal (#8b1a1f) is the document's only true accent. It carries labels, focus indicators, footnote markers, and hover state. It is never a background fill behind type. It does not appear on body type at rest. Its rarity is what makes the cardinal feel like a voice, not a decoration.", "section": "colors" },
+      { "name": "The No-Pure-White Rule", "body": "The page background is #fbf7ec, never #fff. Surfaces are #f5efe0, never #fafafa. The cream IS the paper; pure white would read as a screen and break the Loeb illusion immediately.", "section": "colors" },
+      { "name": "The Cardinal-Never-Fills Rule", "body": "Cardinal renders as type, border, outline, or 1px-icon stroke. It is never a background-color fill, never a button surface, never a callout body.", "section": "colors" },
+      { "name": "The Italic-Garamond-Only-At-Scale Rule", "body": "Italic Garamond is the document's headline gesture, used at 1.7rem and above. It is not used for body emphasis; the italic-at-scale is a Loeb / classical-edition convention; italic-at-body would be magazine.", "section": "typography" },
+      { "name": "The No-Sans-Serif Rule", "body": "This is a book. There is no sans-serif font on the page, ever, including labels and metadata. Adding a single sans would announce 'this is a website.'", "section": "typography" },
+      { "name": "The Bilingual-Parity Rule", "body": "Whatever the English column gets, the Chinese column gets. No language is a translation appendage of the other.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Resting surfaces are flat. The popover is the only shadowed surface in the system. If you find yourself wanting a shadow to separate one block from another, use the rule line or a tonal shift to paper-deep instead.", "section": "elevation" },
+      { "name": "The Tonal-Layer Rule", "body": "The system has exactly three tonal layers: page, chrome, popover. No additional surface shades.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do preserve the bilingual two-column grid at every level (body, TOC, translator's note, popover).",
+      "Do use Magisterial Cardinal (#8b1a1f) only as type, border, outline, or 1px stroke. Never as a fill.",
+      "Do keep the paragraph-number gutter at the left of each column (the Loeb convention).",
+      "Do use middle-dots (·) as separators in chrome (TOC, labels, masthead). Both English and Chinese halves of the same line should use the same separator.",
+      "Do name colors with the manuscript voice for accents and the restrained voice for neutrals.",
+      "Do verify color contrast for Muted Stone on paper-deep whenever you scale down.",
+      "Do ship a print stylesheet whenever new chrome is added; encyclicals get printed for study.",
+      "Do respect prefers-reduced-motion reflexively.",
+      "Do keep visible :focus-visible outlines on every interactive element in Magisterial Cardinal at 1.5–2px width."
+    ],
+    "donts": [
+      "Don't use side-stripe borders. border-left or border-right greater than 1px as a colored accent is forbidden by impeccable's absolute bans.",
+      "Don't use em dashes ( — or --) in chrome (UI copy, TOC, labels, page title, popover headers). Use commas, colons, semicolons, periods, or middle-dots. Chinese —— (full-width double dash) is preserved as Chinese typographic convention.",
+      "Don't add Cormorant or Cormorant Garamond to font stacks; both are on impeccable's reflex-reject list.",
+      "Don't introduce a sans-serif anywhere on the document. This is a book.",
+      "Don't use #000 or #fff. The page is cream paper with warm-black ink.",
+      "Don't drift into AI/SaaS landing-page aesthetics: gradients, hero CTAs, three-column feature cards, Inter or Plus Jakarta Sans.",
+      "Don't drift into megachurch / evangelical web style: stock photos of crowds and skies, casual sans, soft pastel backgrounds.",
+      "Don't drift into generic Wikipedia / Project Gutenberg plain-text indifference.",
+      "Don't add cards. The TOC and the translator's note are bordered note panels, not cards.",
+      "Don't add modals. The popover is positioned under the scripture link, not a modal.",
+      "Don't animate layout properties.",
+      "Don't repeat the source attribution in both the translator's note and the colophon."
+    ]
+  }
+}
