@@ -13,46 +13,66 @@ colors:
 typography:
   display:
     fontFamily: "EB Garamond, Source Serif Pro, Iowan Old Style, Times New Roman, serif"
-    fontSize: "3.2rem"
+    fontSize: "clamp(2.4rem, 4.5vw + 0.8rem, 3.4rem)"
     fontWeight: 600
-    lineHeight: "1.1"
-    letterSpacing: "0.03em"
+    lineHeight: "1.05"
+    letterSpacing: "0.02em"
+    fontFeature: "kern, liga, dlig"
   display-zh:
     fontFamily: "Noto Serif TC, Source Han Serif TC, Songti TC, PingFang TC, serif"
-    fontSize: "2.2rem"
+    fontSize: "clamp(1.7rem, 3vw + 0.6rem, 2.4rem)"
     fontWeight: 700
     lineHeight: "1.2"
     letterSpacing: "normal"
   headline:
     fontFamily: "EB Garamond, Source Serif Pro, serif"
-    fontSize: "1.7rem"
+    fontSize: "1.758rem"
+    fontWeight: 600
+    lineHeight: "1.2"
+    letterSpacing: "normal"
+    fontFeature: "kern, liga, dlig"
+  headline-zh:
+    fontFamily: "Noto Serif TC, Source Han Serif TC, serif"
+    fontSize: "1.45rem"
+    fontWeight: 700
+    lineHeight: "1.3"
+  title:
+    fontFamily: "EB Garamond, Source Serif Pro, serif"
+    fontSize: "1.406rem"
     fontWeight: 600
     lineHeight: "1.3"
     letterSpacing: "normal"
-  title:
-    fontFamily: "EB Garamond, Source Serif Pro, serif"
-    fontSize: "1.25rem"
-    fontWeight: 600
+    fontFeature: "kern, liga, dlig"
+  title-zh:
+    fontFamily: "Noto Serif TC, serif"
+    fontSize: "1.2rem"
+    fontWeight: 700
     lineHeight: "1.4"
-    letterSpacing: "normal"
   body:
     fontFamily: "EB Garamond, Source Serif Pro, Iowan Old Style, Times New Roman, serif"
-    fontSize: "18px"
+    fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: "1.65"
     letterSpacing: "normal"
+    fontFeature: "kern, liga, calt"
   body-zh:
     fontFamily: "Noto Serif TC, Source Han Serif TC, PingFang TC, serif"
-    fontSize: "17.5px"
+    fontSize: "1.094rem"
     fontWeight: 400
     lineHeight: "1.95"
     letterSpacing: "normal"
+  caption:
+    fontFamily: "EB Garamond, Source Serif Pro, serif"
+    fontSize: "0.9rem"
+    fontWeight: 400
+    lineHeight: "1.55"
   label:
     fontFamily: "EB Garamond, Source Serif Pro, serif"
     fontSize: "0.78rem"
     fontWeight: 600
     lineHeight: "1.2"
     letterSpacing: "0.22em"
+    fontFeature: "smcp, kern"
 rounded:
   sm: "2px"
   md: "3px"
@@ -152,13 +172,18 @@ A warm, paper-toned palette: one cream surface, one ink, one cardinal, one gold,
 
 ### Hierarchy
 
-- **Display** (600 weight, italic, 3.2rem, line-height 1.1, letter-spacing 0.03em): the masthead title (`MAGNIFICA HUMANITAS`). Italic Garamond at this scale is the document's single typographic flourish. Drops to 2.2rem under 900px.
-- **Display ZH** (700 weight, 2.2rem, Noto Serif TC): the masthead Chinese title (`「壯麗的人性」通諭`). Sits beneath the English display title at smaller scale per the source-language hierarchy.
-- **Headline** (600 weight, italic, 1.7rem): chapter and section titles in the body (`The grandeur of humanity...`). Same italic Garamond as Display, just smaller.
-- **Title** (600 weight, italic, 1.25rem): subhead row across both columns (the `<div class="subhead">`). Cardinal-colored italic on the English side, plain Ming-style on the Chinese.
-- **Body** (400 weight, 18px, line-height 1.65): English column body type. Cap line length: each of the two columns sits in roughly 45rem of a 90rem grid, putting line length at ~70ch — within the 65-75ch target.
-- **Body ZH** (400 weight, 17.5px, line-height 1.95): Chinese column body type. Chinese needs more line-height than English at the same x-height; 1.95 is calibrated for sustained Ming-style reading.
-- **Label** (600 weight, 0.78rem, letter-spacing 0.22em, small-caps): every chrome label — section dividers (`INTRODUCTION · 引言`), TOC heading (`Contents · 目錄`), translator's note label (`Translator's Note & Source · 譯者按與來源`), colophon labels (`Scripture provenance`). Cardinal-colored.
+The scale is built on a 1.25 (major-third) ratio anchored at 1.125rem body type. Display sizes are fluid (`clamp()`); document-internal sizes are fixed rem so the bilingual grid stays predictable across viewport widths.
+
+- **Display** (600 weight, italic, `clamp(2.4rem, 4.5vw + 0.8rem, 3.4rem)`, line-height 1.05, letter-spacing 0.02em): the masthead title (`MAGNIFICA HUMANITAS`). Italic Garamond at this scale is the document's single typographic flourish. Fluid sizing replaces the previous fixed 3.2rem + mobile breakpoint pair. OpenType: `kern, liga, dlig` enables discretionary `st` and `ct` ligatures appropriate to the period reference.
+- **Display ZH** (700 weight, `clamp(1.7rem, 3vw + 0.6rem, 2.4rem)`, Noto Serif TC): the masthead Chinese title (`「壯麗的人性」通諭`). Sits beneath the English display title at proportionally smaller scale per the source-language hierarchy. Also fluid; preserves the ~1.42 EN:ZH display ratio at all viewport widths.
+- **Headline** (600 weight, italic, 1.758rem): chapter and section titles in the body (`The grandeur of humanity...`). Same italic Garamond as Display, one step down on the 1.25 scale.
+- **Headline ZH** (700 weight, 1.45rem): the Chinese counterpart to Headline. Slightly smaller in number than the EN, larger in optical weight per em — calibrated for visual parity, not numerical parity.
+- **Title** (600 weight, italic, 1.406rem): subhead row across both columns (the `<div class="subhead">`). Cardinal-colored italic on the English side.
+- **Title ZH** (700 weight, 1.2rem): Chinese subhead. Plain Ming-style.
+- **Body** (400 weight, 1.125rem / 18px, line-height 1.65): English column body type. Each of the two columns sits in roughly 43.75rem within a 90rem grid, putting line length at ~70ch — within the 65–75ch target. OpenType: `kern, liga, calt` for proper kerning, standard ligatures, and contextual alternates.
+- **Body ZH** (400 weight, 1.094rem / 17.5px, line-height 1.95): Chinese column body type. Chinese needs more line-height than English at the same optical x-height; 1.95 is calibrated for sustained Ming-style reading.
+- **Caption** (400 weight, 0.9rem, line-height 1.55): a single consolidated size for all chrome metadata — colophon body, popover body, translator's note body, date line context, footnotes body. Replaces the previous scattered 0.85–0.92rem cluster of 5+ near-identical sizes.
+- **Label** (600 weight, 0.78rem, letter-spacing 0.22em, `font-variant-caps: all-small-caps`): every chrome label — section dividers (`INTRODUCTION · 引言`), TOC heading (`Contents · 目錄`), translator's note label, popover headers, colophon labels (`Scripture provenance`). Cardinal-colored. Uses real OpenType small-caps (`smcp`) via `font-variant-caps: all-small-caps`, not the legacy `font-variant: small-caps` which falls back to synthesized capitals.
 
 ### Named Rules
 
@@ -167,6 +192,8 @@ A warm, paper-toned palette: one cream surface, one ink, one cardinal, one gold,
 **The No-Sans-Serif Rule.** This is a book. There is no sans-serif font on the page, ever, including labels and metadata. Labels get their distinctiveness from small-caps + letter-spacing on Garamond, not from a sans-serif switch. Adding a single sans would announce "this is a website."
 
 **The Bilingual-Parity Rule.** Whatever the English column gets, the Chinese column gets. If English body is 18px, Chinese body is 17.5px (compensated for Chinese x-height). If English has a small-caps tracked label, Chinese gets the same content in a Ming-style 700-weight Chinese-typographic equivalent. No language is a translation *appendage* of the other.
+
+**The Real-Small-Caps Rule.** Labels use `font-variant-caps: all-small-caps` plus `font-feature-settings: "smcp", "kern"`, not the legacy `font-variant: small-caps`. EB Garamond carries true `smcp` glyphs that are slightly heavier and proportioned differently from the lowercase; falling back to synthesized capitals would produce thinner, optically lighter labels and undermine the cardinal hierarchy. Same for `dlig` (discretionary ligatures: `st`, `ct`) on display and headline, and `tnum`/`lnum` on paragraph numbers — these OpenType tables are *in* the font and free; not engaging them is the choice that costs craft.
 
 ## 4. Elevation
 
