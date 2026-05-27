@@ -14,7 +14,15 @@
       "wp_en": "https://en.wikipedia.org/wiki/Encyclical",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E9%80%9A%E8%AB%AD",
       "def_en": "A circular letter from the Pope, traditionally addressed to bishops but often, as here, extended to all the faithful and people of goodwill. One of the highest forms of ordinary papal teaching.",
-      "def_zh": "教宗發出的公開信函，傳統上致主教，而如本文常擴展至全體信友及所有善心人士。屬教宗一般訓導中規格較高的一種。"
+      "def_zh": "教宗發出的公開信函，傳統上致主教，而如本文常擴展至全體信友及所有善心人士。屬教宗一般訓導中規格較高的一種。",
+      "surface_forms": {
+        "en": [
+          "encyclical"
+        ],
+        "zh": [
+          "通諭"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -24,7 +32,18 @@
       "wp_en": "https://en.wikipedia.org/wiki/Catholic_social_teaching",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%A4%A9%E4%B8%BB%E6%95%99%E7%A4%BE%E6%9C%83%E8%A8%93%E5%B0%8E",
       "def_en": "The body of Catholic moral teaching on social, political, and economic life, developed over 135 years through papal encyclicals beginning with <em>Rerum Novarum</em> (1891). <em>Magnifica Humanitas</em> extends this tradition to AI.",
-      "def_zh": "教會自《新事》通諭（1891 年）以來，藉教宗通諭等訓導文件所發展、關於社會、政治與經濟生活的倫理訓導體系。《偉大的人類》將此傳統延伸至人工智能領域。"
+      "def_zh": "教會自《新事》通諭（1891 年）以來，藉教宗通諭等訓導文件所發展、關於社會、政治與經濟生活的倫理訓導體系。《偉大的人類》將此傳統延伸至人工智能領域。",
+      "surface_forms": {
+        "en": [
+          "Catholic Social Teaching",
+          "Social Doctrine of the Church",
+          "Social Teaching of the Church"
+        ],
+        "zh": [
+          "教會社會訓導",
+          "社會訓導"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -34,7 +53,15 @@
       "wp_en": "https://en.wikipedia.org/wiki/Rerum_novarum",
       "wp_zh": null,
       "def_en": "Pope Leo XIII&rsquo;s encyclical on labor, capital, and the social order, written during the upheavals of industrialization. The founding document of modern Catholic Social Teaching; <em>Magnifica Humanitas</em> marks its 135th anniversary.",
-      "def_zh": "教宗良十三世於工業革命動盪時期所頒，論勞動、資本與社會秩序的通諭。現代教會社會訓導的奠基文獻；《偉大的人類》正值其頒布一百三十五週年。"
+      "def_zh": "教宗良十三世於工業革命動盪時期所頒，論勞動、資本與社會秩序的通諭。現代教會社會訓導的奠基文獻；《偉大的人類》正值其頒布一百三十五週年。",
+      "surface_forms": {
+        "en": [
+          "Rerum Novarum"
+        ],
+        "zh": [
+          "《新事》"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -44,7 +71,15 @@
       "wp_en": "https://en.wikipedia.org/wiki/Common_good#Catholic_social_thought",
       "wp_zh": null,
       "def_en": "A core principle of Catholic Social Teaching: the conditions of social life that allow groups and individuals to reach their fulfillment more fully and easily. Not the same as &ldquo;majority benefit.&rdquo;",
-      "def_zh": "教會社會訓導的核心原則：使團體或個人得以更完滿、更輕易達致圓滿之社會條件的總和。與「多數人利益」並不相同。"
+      "def_zh": "教會社會訓導的核心原則：使團體或個人得以更完滿、更輕易達致圓滿之社會條件的總和。與「多數人利益」並不相同。",
+      "surface_forms": {
+        "en": [
+          "common good"
+        ],
+        "zh": [
+          "公益"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -54,7 +89,16 @@
       "wp_en": "https://en.wikipedia.org/wiki/Subsidiarity_(Catholicism)",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E8%BC%94%E5%8A%A9%E6%80%A7%E5%8E%9F%E5%89%87",
       "def_en": "Decisions should be made at the most local level competent to make them; higher authorities should support, not replace, smaller bodies. The encyclical argues that in the digital age the &ldquo;highest level&rdquo; is no longer the State but transnational tech firms (&para;71).",
-      "def_zh": "決策應由最能勝任的最基層作出；更高的權威應協助而非取代較小的單位。本通諭指出，在數碼時代，這個「最高層」已不是國家，而是跨國科技公司（¶71）。"
+      "def_zh": "決策應由最能勝任的最基層作出；更高的權威應協助而非取代較小的單位。本通諭指出，在數碼時代，這個「最高層」已不是國家，而是跨國科技公司（¶71）。",
+      "surface_forms": {
+        "en": [
+          "subsidiarity"
+        ],
+        "zh": [
+          "輔助性原則",
+          "輔助性"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -64,7 +108,17 @@
       "wp_en": "https://en.wikipedia.org/wiki/Tower_of_Babel",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%B7%B4%E5%88%A5%E5%A1%94",
       "def_en": "The biblical story (Gen 11) in which humanity, unified by one language, builds a tower to reach heaven; God confounds their language and scatters them. The encyclical uses it as the negative pole: technology in service of pride, control, and a single flattening logic.",
-      "def_zh": "聖經（創 11）所載：人類本操同一語言，欲建塔通天；天主混亂其語言，將之分散。本通諭以此為負面意象：科技服務於驕傲、控制與抹平差異的單一邏輯。"
+      "def_zh": "聖經（創 11）所載：人類本操同一語言，欲建塔通天；天主混亂其語言，將之分散。本通諭以此為負面意象：科技服務於驕傲、控制與抹平差異的單一邏輯。",
+      "surface_forms": {
+        "en": [
+          "Tower of Babel",
+          "Babel"
+        ],
+        "zh": [
+          "巴貝耳塔",
+          "巴貝耳"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -74,7 +128,15 @@
       "wp_en": "https://en.wikipedia.org/wiki/Nehemiah",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%B0%BC%E5%B8%8C%E7%B1%B3",
       "def_en": "A Hebrew official in the Persian court (5th c. BCE) who returned to Jerusalem and organized the rebuilding of the city&rsquo;s walls. The encyclical uses his slow, communal, prayerful project as the positive counter-image to Babel.",
-      "def_zh": "公元前五世紀波斯朝廷的猶太官員，後返回耶路撒冷主持重建城牆。本通諭以其緩慢、共議、寓於祈禱的工程，作為巴貝耳塔的正面對照意象。"
+      "def_zh": "公元前五世紀波斯朝廷的猶太官員，後返回耶路撒冷主持重建城牆。本通諭以其緩慢、共議、寓於祈禱的工程，作為巴貝耳塔的正面對照意象。",
+      "surface_forms": {
+        "en": [
+          "Nehemiah"
+        ],
+        "zh": [
+          "乃赫米雅"
+        ]
+      }
     },
     {
       "group_en": "Catholic terms",
@@ -84,7 +146,16 @@
       "wp_en": "https://en.wikipedia.org/wiki/Incarnation_(Christianity)",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E9%81%93%E6%88%90%E8%82%89%E8%BA%AB",
       "def_en": "The central Christian doctrine that God the Son took on human flesh in Jesus Christ &mdash; fully divine, fully human. In the encyclical&rsquo;s conclusion this is the answer to transhumanism: humanity is dignified by God&rsquo;s having entered it, not by being engineered beyond it (&para;231&ndash;233).",
-      "def_zh": "基督宗教核心信理：聖子在耶穌基督內取得人的血肉，全然是天主，亦全然是人。本通諭結尾以此回應超人類主義：人性的尊嚴來自天主的降生其中，而非藉工程超越其外（¶231–233）。"
+      "def_zh": "基督宗教核心信理：聖子在耶穌基督內取得人的血肉，全然是天主，亦全然是人。本通諭結尾以此回應超人類主義：人性的尊嚴來自天主的降生其中，而非藉工程超越其外（¶231–233）。",
+      "surface_forms": {
+        "en": [
+          "Incarnation"
+        ],
+        "zh": [
+          "聖言成了血肉",
+          "降生成人"
+        ]
+      }
     },
     {
       "group_en": "AI and technology",
@@ -94,7 +165,16 @@
       "wp_en": "https://en.wikipedia.org/wiki/Artificial_intelligence",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD",
       "def_en": "Computer systems that perform tasks usually requiring human cognition: recognizing speech, generating text, making decisions. The encyclical insists this is not the same as human intelligence; systems only imitate certain functions of it (&para;99).",
-      "def_zh": "執行通常需要人類認知能力的電腦系統：語音識別、文本生成、決策等。本通諭堅持這並非人類智能，系統僅模仿其某些功能（¶99）。"
+      "def_zh": "執行通常需要人類認知能力的電腦系統：語音識別、文本生成、決策等。本通諭堅持這並非人類智能，系統僅模仿其某些功能（¶99）。",
+      "surface_forms": {
+        "en": [
+          "artificial intelligence",
+          "\\bAI\\b"
+        ],
+        "zh": [
+          "人工智能"
+        ]
+      }
     },
     {
       "group_en": "AI and technology",
@@ -104,7 +184,16 @@
       "wp_en": "https://en.wikipedia.org/wiki/AI_alignment",
       "wp_zh": null,
       "def_en": "The technical and ethical project of making AI systems pursue goals that match human values. The encyclical argues alignment cannot be achieved by engineering alone &mdash; the ethical frameworks themselves must be openly debated (&para;107).",
-      "def_zh": "使人工智能系統的目標與人性價值一致的技術與倫理工程。本通諭主張此事不能單靠工程達成——倫理框架本身必須公開辯論（¶107）。"
+      "def_zh": "使人工智能系統的目標與人性價值一致的技術與倫理工程。本通諭主張此事不能單靠工程達成——倫理框架本身必須公開辯論（¶107）。",
+      "surface_forms": {
+        "en": [
+          "AI alignment",
+          "alignment"
+        ],
+        "zh": [
+          "人工智能對齊"
+        ]
+      }
     },
     {
       "group_en": "AI and technology",
@@ -114,7 +203,16 @@
       "wp_en": "https://en.wikipedia.org/wiki/Transhumanism",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E8%B6%85%E4%BA%BA%E9%A1%9E%E4%B8%BB%E7%BE%A9",
       "def_en": "A movement holding that humanity should use technology to transcend biological limits &mdash; overcoming aging, illness, and the present human condition. The encyclical critiques it as treating the human as something to be perfected or surpassed (&para;115&ndash;117).",
-      "def_zh": "主張人類應運用科技超越生物極限——克服老化、疾病及當下人的處境——的思潮。本通諭批判其將人視為待完善或待超越者（¶115–117）。"
+      "def_zh": "主張人類應運用科技超越生物極限——克服老化、疾病及當下人的處境——的思潮。本通諭批判其將人視為待完善或待超越者（¶115–117）。",
+      "surface_forms": {
+        "en": [
+          "transhumanism",
+          "transhumanist"
+        ],
+        "zh": [
+          "超人類主義"
+        ]
+      }
     },
     {
       "group_en": "AI and technology",
@@ -124,7 +222,16 @@
       "wp_en": "https://en.wikipedia.org/wiki/Laudato_si%27",
       "wp_zh": null,
       "def_en": "A term coined by Pope Francis (<em>Laudato Si&rsquo;</em>, 2015) for the worldview in which the logic of efficiency, control, and profit alone shapes personal, social, and economic decisions. <em>Magnifica Humanitas</em> extends this critique to AI.",
-      "def_zh": "教宗方濟各於《願祢受讚頌》通諭（2015）所提出之概念：在此世界觀中，效率、控制與利益的邏輯主導了個人、社會與經濟的一切決定。《偉大的人類》將此批判延伸至人工智能領域。"
+      "def_zh": "教宗方濟各於《願祢受讚頌》通諭（2015）所提出之概念：在此世界觀中，效率、控制與利益的邏輯主導了個人、社會與經濟的一切決定。《偉大的人類》將此批判延伸至人工智能領域。",
+      "surface_forms": {
+        "en": [
+          "technocratic paradigm"
+        ],
+        "zh": [
+          "科技至上典範",
+          "科技至上"
+        ]
+      }
     },
     {
       "group_en": "AI and technology",
@@ -134,7 +241,17 @@
       "wp_en": "https://en.wikipedia.org/wiki/Lethal_autonomous_weapon",
       "wp_zh": "https://zh.wikipedia.org/zh-hk/%E8%87%B4%E5%91%BD%E6%80%A7%E8%87%AA%E4%B8%BB%E6%AD%A6%E5%99%A8",
       "def_en": "Weapons that can select and engage targets without direct human intervention. The encyclical insists on traceable decision-making and rejects the framing of &ldquo;artificial moral agents&rdquo;: moral judgment cannot be reduced to calculation (&para;197&ndash;200).",
-      "def_zh": "無需人類直接介入便可選擇並攻擊目標的武器。本通諭堅持決策過程必須可追溯，並拒絕「人造道德主體」之提法：道德判斷不能化約為計算（¶197–200）。"
+      "def_zh": "無需人類直接介入便可選擇並攻擊目標的武器。本通諭堅持決策過程必須可追溯，並拒絕「人造道德主體」之提法：道德判斷不能化約為計算（¶197–200）。",
+      "surface_forms": {
+        "en": [
+          "lethal autonomous weapons?",
+          "autonomous weapons?"
+        ],
+        "zh": [
+          "自主武器系統",
+          "自主武器"
+        ]
+      }
     },
     {
       "group_en": "AI and technology",
@@ -143,8 +260,415 @@
       "term_zh": "數據殖民主義",
       "wp_en": "https://en.wikipedia.org/wiki/Data_colonialism",
       "wp_zh": null,
-      "def_en": "A framework describing how digital systems extract personal data from populations (especially in the Global South) as a 21st-century analog to historical colonial resource extraction. Named explicitly in &para;178.",
-      "def_zh": "描述數碼系統如何從全球（尤其南半球）人口中抽取個人數據之框架，視為廿一世紀的殖民式資源開採之對應物。本通諭於 ¶178 明確點名。"
+      "def_en": "A framework describing how digital systems extract personal data from populations (especially in the Global South) as a 21st-century analog to historical colonial resource extraction. The encyclical describes this dynamic at &para;178: colonialism &ldquo;no longer dominates only bodies, but appropriates data.&rdquo;",
+      "def_zh": "描述數碼系統如何從全球（尤其南半球）人口中抽取個人數據之框架，視為廿一世紀的殖民式資源開採之對應物。本通諭 ¶178 形容此現象：殖民主義「不再僅奴役肉身，更挪佔了數據」。",
+      "surface_forms": {
+        "en": [
+          "data colonialism"
+        ],
+        "zh": [
+          "數據殖民主義"
+        ]
+      }
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Algorithm",
+      "term_zh": "演算法",
+      "wp_en": "https://en.wikipedia.org/wiki/Algorithm",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E6%BC%94%E7%AE%97%E6%B3%95",
+      "def_en": "A finite sequence of rigorous, machine-executable instructions for solving a class of problems. In contemporary usage the term also denotes the often opaque decision systems that shape online life; the encyclical insists they are not morally neutral (&para;67&ndash;72).",
+      "def_zh": "為解決某類問題而設、可由機器執行之有限而嚴密的指令序列；在當代用法中亦常泛指影響網絡生活的不透明決策系統。本通諭強調演算法絕非道德中立（¶67&ndash;72）。",
+      "surface_forms": {
+        "en": [
+          "algorithms?",
+          "algorithmic"
+        ],
+        "zh": [
+          "演算法"
+        ]
+      }
+    },
+    {
+      "group_en": "AI and technology",
+      "group_zh": "人工智能與科技",
+      "term_en": "Large language model",
+      "term_zh": "大型語言模型",
+      "wp_en": "https://en.wikipedia.org/wiki/Large_language_model",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B",
+      "def_en": "A neural network trained on vast amounts of text to generate, summarize, translate, or parse natural language &mdash; the technology behind contemporary AI chatbots. The encyclical treats current systems as imitating language without understanding it (&para;101).",
+      "def_zh": "以海量文本訓練、用以生成、撮要、翻譯或剖析自然語言的神經網絡，為當代人工智能聊天機械人之技術基礎。本通諭視現今系統為「模仿語言而無理解」（¶101）。",
+      "surface_forms": {
+        "en": [
+          "large language models?",
+          "\\bLLMs?\\b"
+        ],
+        "zh": [
+          "大型語言模型"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic documents and councils",
+      "group_zh": "教會文獻與大公會議",
+      "term_en": "Second Vatican Council",
+      "term_zh": "梵蒂岡第二屆大公會議",
+      "wp_en": "https://en.wikipedia.org/wiki/Second_Vatican_Council",
+      "wp_zh": "https://zh.wikipedia.org/zh-hk/%E6%A2%B5%E8%92%82%E5%B2%A1%E7%AC%AC%E4%BA%8C%E5%B1%86%E5%A4%A7%E5%85%AC%E6%9C%83%E8%AD%B0",
+      "def_en": "The 21st ecumenical council of the Catholic Church (1962&ndash;1965), convoked by John XXIII for <em>aggiornamento</em> &mdash; an updating of the Church&rsquo;s engagement with the modern world &mdash; and closed by Paul VI. The encyclical repeatedly draws on its teaching (&para;17, 20&ndash;26).",
+      "def_zh": "天主教會第二十一屆大公會議（1962&ndash;1965），由教宗若望二十三世為求教會與現代世界對話之「更新」（aggiornamento）而召開，並由保祿六世閉幕。本通諭多處援引其訓導（¶17、20&ndash;26）。",
+      "surface_forms": {
+        "en": [
+          "Second Vatican Council",
+          "Vatican II\\b"
+        ],
+        "zh": [
+          "梵蒂岡第二屆大公會議",
+          "梵二大公會議",
+          "梵二"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic documents and councils",
+      "group_zh": "教會文獻與大公會議",
+      "term_en": "Gaudium et Spes",
+      "term_zh": "《牧職憲章》",
+      "wp_en": "https://en.wikipedia.org/wiki/Gaudium_et_spes",
+      "wp_zh": null,
+      "def_en": "<em>Gaudium et Spes</em> (1965), the Second Vatican Council&rsquo;s Pastoral Constitution on the Church in the Modern World. The first conciliar document to address the entire world, treating culture, economy, politics, and peace.",
+      "def_zh": "《論教會在現代世界牧職憲章》（1965），梵蒂岡第二屆大公會議所頒之牧職憲章。為首份向全人類發言之大公會議文獻，涵蓋文化、經濟、政治與和平諸議題。",
+      "surface_forms": {
+        "en": [
+          "Gaudium et spes"
+        ],
+        "zh": [
+          "《牧職憲章》",
+          "牧職憲章"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic documents and councils",
+      "group_zh": "教會文獻與大公會議",
+      "term_en": "Populorum Progressio (1967)",
+      "term_zh": "《民族發展》通諭",
+      "wp_en": "https://en.wikipedia.org/wiki/Populorum_progressio",
+      "wp_zh": null,
+      "def_en": "Pope Paul VI&rsquo;s 1967 encyclical on the development of peoples. Coined the principle of &ldquo;integral human development&rdquo; &mdash; that development is authentic only if it serves the whole person and all peoples (cited at &para;82).",
+      "def_zh": "教宗保祿六世於 1967 年頒布之通諭，論民族發展。提出「整全人類發展」原則：發展唯有服務於整個人與所有民族時，方屬真實（¶82 援引）。",
+      "surface_forms": {
+        "en": [
+          "Populorum progressio",
+          "Populorum Progressio"
+        ],
+        "zh": [
+          "《民族發展》"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic documents and councils",
+      "group_zh": "教會文獻與大公會議",
+      "term_en": "Laudato Si&rsquo; (2015)",
+      "term_zh": "《願祢受讚頌》通諭",
+      "wp_en": "https://en.wikipedia.org/wiki/Laudato_Si%27",
+      "wp_zh": null,
+      "def_en": "Pope Francis&rsquo; 2015 encyclical on integral ecology and the care of &ldquo;our common home.&rdquo; Its critique of the &ldquo;technocratic paradigm&rdquo; is extended by <em>Magnifica Humanitas</em> from ecology to AI (&para;28, 92).",
+      "def_zh": "教宗方濟各 2015 年所頒通諭，論「整全生態」與守護「我們共同家園」。其對「科技至上典範」的批判，由《偉大的人類》從生態議題延伸至人工智能領域（¶28、92）。",
+      "surface_forms": {
+        "en": [
+          "Laudato Si['’]?"
+        ],
+        "zh": [
+          "《願祢受讚頌》"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic documents and councils",
+      "group_zh": "教會文獻與大公會議",
+      "term_en": "Fratelli Tutti (2020)",
+      "term_zh": "《眾位弟兄》通諭",
+      "wp_en": "https://en.wikipedia.org/wiki/Fratelli_tutti",
+      "wp_zh": null,
+      "def_en": "Pope Francis&rsquo; 2020 encyclical on fraternity and social friendship, written in the wake of COVID-19. A key interlocutor of <em>Magnifica Humanitas</em> on solidarity across digital borders (&para;28, 186).",
+      "def_zh": "教宗方濟各 2020 年所頒通諭，於新型冠狀病毒大流行之際論手足情誼與社會友愛。為《偉大的人類》就跨越數碼疆界之團結議題的重要對話對象（¶28、186）。",
+      "surface_forms": {
+        "en": [
+          "Fratelli tutti",
+          "Fratelli Tutti"
+        ],
+        "zh": [
+          "《眾位弟兄》"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic documents and councils",
+      "group_zh": "教會文獻與大公會議",
+      "term_en": "Dignitas Infinita (2024)",
+      "term_zh": "《無限尊嚴》宣言",
+      "wp_en": "https://en.wikipedia.org/wiki/Dignitas_infinita",
+      "wp_zh": null,
+      "def_en": "The 2024 declaration of the Dicastery for the Doctrine of the Faith on human dignity. Quoted at &para;53: &ldquo;every human person possesses an infinite dignity, inalienably grounded in his or her very being.&rdquo;",
+      "def_zh": "教廷信理部 2024 年就人性尊嚴所發表之宣言。本通諭 ¶53 引述：「每個人皆具無限尊嚴，此尊嚴不可剝奪地植根於其存在本身。」",
+      "surface_forms": {
+        "en": [
+          "Dignitas infinita",
+          "Dignitas Infinita"
+        ],
+        "zh": [
+          "《無限尊嚴》"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Magisterium",
+      "term_zh": "訓導",
+      "wp_en": "https://en.wikipedia.org/wiki/Magisterium",
+      "wp_zh": null,
+      "def_en": "The Church&rsquo;s teaching office, exercised by the Pope and the bishops in communion with him &mdash; the authoritative interpretation of Scripture and Tradition. An encyclical is one of its ordinary instruments.",
+      "def_zh": "教會的訓導職分，由教宗及與其共融之主教們行使——對聖經與聖傳之權威詮釋。通諭即其一般行使方式之一。",
+      "surface_forms": {
+        "en": [
+          "magisterium"
+        ],
+        "zh": [
+          "訓導"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Synodality",
+      "term_zh": "共議性",
+      "wp_en": "https://en.wikipedia.org/wiki/Synodality",
+      "wp_zh": null,
+      "def_en": "From the Greek <em>syn-hodos</em>, &ldquo;journeying together.&rdquo; The principle, emphasized under Pope Francis, that the whole People of God walks and discerns together. The encyclical applies it to the discernment of AI&rsquo;s proper place in society (&para;86, 89).",
+      "def_zh": "源於希臘文 <em>syn-hodos</em>「共同行走」之意。教宗方濟各任內所強調之原則：天主子民全體共同同行、共同分辨。本通諭將之應用於分辨人工智能於社會中應有之位分（¶86、89）。",
+      "surface_forms": {
+        "en": [
+          "synodality",
+          "synodal"
+        ],
+        "zh": [
+          "共議性"
+        ]
+      }
+    },
+    {
+      "group_en": "Catholic terms",
+      "group_zh": "天主教用語",
+      "term_en": "Imago Dei (image of God)",
+      "term_zh": "天主的肖像",
+      "wp_en": "https://en.wikipedia.org/wiki/Image_of_God",
+      "wp_zh": null,
+      "def_en": "Latin for &ldquo;image of God.&rdquo; The Genesis 1:27 doctrine that the human person is created in God&rsquo;s image &mdash; the foundation of Christian anthropology and of universal human dignity. The encyclical insists no machine, however capable, shares in this (&para;73, 176).",
+      "def_zh": "拉丁文「天主的肖像」之意。源自創世紀 1 章 27 節：人受造肖似天主——基督宗教人學及普世人性尊嚴之根基。本通諭堅持：無論機器如何強大，皆不分享此一肖像（¶73、176）。",
+      "surface_forms": {
+        "en": [
+          "Imago Dei",
+          "image of God"
+        ],
+        "zh": [
+          "天主的肖像"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Leo XIV",
+      "term_zh": "良十四世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Leo_XIV",
+      "wp_zh": null,
+      "def_en": "The current head of the Catholic Church, elected in 2025. The first U.S.-born pope and the first from the Order of Saint Augustine. The author of <em>Magnifica Humanitas</em>; the choice of name explicitly invokes Leo XIII and the dawn of modern Catholic Social Teaching.",
+      "def_zh": "現任教宗，於 2025 年當選。為首位生於美國之教宗，亦是首位出身聖奧斯定會之教宗。《偉大的人類》通諭之頒布者；其名號明顯回應教宗良十三世與現代教會社會訓導之肇始。",
+      "surface_forms": {
+        "en": [
+          "Leo XIV\\b"
+        ],
+        "zh": [
+          "良十四世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Leo XIII",
+      "term_zh": "良十三世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Leo_XIII",
+      "wp_zh": null,
+      "def_en": "Pope Leo XIII (1810&ndash;1903), reigned 1878&ndash;1903. His 1891 encyclical <em>Rerum Novarum</em> founded modern Catholic Social Teaching by addressing the rights and duties of labor and capital; <em>Magnifica Humanitas</em> is dated to coincide with its 135th anniversary (&para;3, 174).",
+      "def_zh": "教宗良十三世（1810&ndash;1903），1878&ndash;1903 年在任。其 1891 年所頒《新事》通諭，論勞動與資本之權利與義務，奠下現代教會社會訓導的根基；《偉大的人類》之頒布日期恰逢《新事》一百三十五週年（¶3、174）。",
+      "surface_forms": {
+        "en": [
+          "Leo XIII\\b"
+        ],
+        "zh": [
+          "良十三世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Pius XI",
+      "term_zh": "庇護十一世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Pius_XI",
+      "wp_zh": null,
+      "def_en": "Pope Pius XI (1857&ndash;1939), reigned 1922&ndash;1939. His 1931 encyclical <em>Quadragesimo Anno</em> developed Catholic Social Teaching between the wars; cited in the encyclical&rsquo;s footnotes.",
+      "def_zh": "教宗庇護十一世（1857&ndash;1939），1922&ndash;1939 年在任。其 1931 年所頒《四十年》通諭，於兩次大戰之間進一步發展教會社會訓導；本通諭附註多處援引。",
+      "surface_forms": {
+        "en": [
+          "Pius XI\\b"
+        ],
+        "zh": [
+          "庇護十一世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Pius XII",
+      "term_zh": "庇護十二世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Pius_XII",
+      "wp_zh": null,
+      "def_en": "Pope Pius XII (1876&ndash;1958), reigned 1939&ndash;1958, through the Second World War and post-war reconstruction. Cited at &para;219 for his pre-war affirmation that &ldquo;nothing is lost with peace, whereas with war everything can be lost.&rdquo;",
+      "def_zh": "教宗庇護十二世（1876&ndash;1958），1939&ndash;1958 年在任，經歷二次大戰及戰後重建時期。本通諭 ¶219 引述其戰前之名言：「以和平則一無所失，以戰爭則可能盡失一切。」",
+      "surface_forms": {
+        "en": [
+          "Pius XII\\b"
+        ],
+        "zh": [
+          "庇護十二世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Paul VI",
+      "term_zh": "保祿六世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Paul_VI",
+      "wp_zh": null,
+      "def_en": "Pope Paul VI (1897&ndash;1978), reigned 1963&ndash;1978. He closed the Second Vatican Council in 1965 and implemented its reforms; his 1967 encyclical <em>Populorum Progressio</em> extended Catholic Social Teaching to international development (&para;73, 82).",
+      "def_zh": "教宗保祿六世（1897&ndash;1978），1963&ndash;1978 年在任。1965 年閉幕梵蒂岡第二屆大公會議並推行其改革；1967 年所頒《民族發展》通諭，將教會社會訓導延伸至國際發展議題（¶73、82）。",
+      "surface_forms": {
+        "en": [
+          "Paul VI\\b"
+        ],
+        "zh": [
+          "保祿六世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "John Paul II",
+      "term_zh": "若望保祿二世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_John_Paul_II",
+      "wp_zh": null,
+      "def_en": "Pope John Paul II (1920&ndash;2005), reigned 1978&ndash;2005. The first non-Italian pope in over four centuries. His encyclicals <em>Laborem Exercens</em> (1981), <em>Sollicitudo Rei Socialis</em> (1987), and <em>Centesimus Annus</em> (1991) consolidated Catholic Social Teaching for the post-industrial age.",
+      "def_zh": "教宗若望保祿二世（1920&ndash;2005），1978&ndash;2005 年在任。為四個多世紀以來首位非意大利籍之教宗。其《工作》（1981）、《社會事務關懷》（1987）及《百年》（1991）三道通諭，鞏固了後工業時代之教會社會訓導。",
+      "surface_forms": {
+        "en": [
+          "John Paul II\\b",
+          "Saint John Paul II\\b"
+        ],
+        "zh": [
+          "若望保祿二世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Benedict XVI",
+      "term_zh": "本篤十六世",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Benedict_XVI",
+      "wp_zh": null,
+      "def_en": "Pope Benedict XVI (1927&ndash;2022), reigned 2005&ndash;2013, the first pope in nearly six centuries to resign. His 2009 encyclical <em>Caritas in Veritate</em> addressed integral human development in a globalized, technologically mediated economy (&para;59, 76).",
+      "def_zh": "教宗本篤十六世（1927&ndash;2022），2005&ndash;2013 年在任，近六百年來首位主動辭職之教宗。其 2009 年所頒《在真理中實踐愛德》通諭，論全球化與科技中介經濟下的整全人類發展（¶59、76）。",
+      "surface_forms": {
+        "en": [
+          "Benedict XVI\\b"
+        ],
+        "zh": [
+          "本篤十六世"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Pope Francis",
+      "term_zh": "方濟各",
+      "wp_en": "https://en.wikipedia.org/wiki/Pope_Francis",
+      "wp_zh": null,
+      "def_en": "Pope Francis (1936&ndash;2025), reigned 2013&ndash;2025. The first Jesuit pope and the first from the Americas. His encyclicals <em>Laudato Si&rsquo;</em> (2015) and <em>Fratelli Tutti</em> (2020) supply much of the intellectual horizon of <em>Magnifica Humanitas</em>.",
+      "def_zh": "教宗方濟各（1936&ndash;2025），2013&ndash;2025 年在任。為首位耶穌會出身之教宗，亦是首位來自美洲之教宗。其《願祢受讚頌》（2015）及《眾位弟兄》（2020）兩道通諭，構成《偉大的人類》之主要思想視野。",
+      "surface_forms": {
+        "en": [
+          "Pope Francis"
+        ],
+        "zh": [
+          "教宗方濟各",
+          "方濟各"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Augustine of Hippo",
+      "term_zh": "聖奧斯定",
+      "wp_en": "https://en.wikipedia.org/wiki/Augustine_of_Hippo",
+      "wp_zh": null,
+      "def_en": "Saint Augustine (354&ndash;430), Bishop of Hippo in Roman North Africa &mdash; one of the most influential Latin Church Fathers. His vision of the human heart as restless until it rests in God runs through the encyclical (&para;11, 215, 234).",
+      "def_zh": "聖奧斯定（354&ndash;430），羅馬北非希波之主教，拉丁教會最具影響力的教父之一。其「人心若不安息於天主內，便終無寧日」之人學思想，貫穿本通諭（¶11、215、234）。",
+      "surface_forms": {
+        "en": [
+          "Saint Augustine",
+          "Augustine of Hippo",
+          "\\bAugustine\\b"
+        ],
+        "zh": [
+          "聖奧斯定",
+          "奧斯定"
+        ]
+      }
+    },
+    {
+      "group_en": "Popes and Church figures",
+      "group_zh": "教宗與教會人物",
+      "term_en": "Thomas Aquinas",
+      "term_zh": "聖多瑪斯&middot;阿奎那",
+      "wp_en": "https://en.wikipedia.org/wiki/Thomas_Aquinas",
+      "wp_zh": null,
+      "def_en": "Saint Thomas Aquinas (1225&ndash;1274), Italian Dominican theologian; the central figure of medieval Catholic philosophy. The encyclical cites him at &para;127 on humanity&rsquo;s call to self-transcendence as a work of grace, not of technique.",
+      "def_zh": "聖多瑪斯&middot;阿奎那（1225&ndash;1274），意大利道明會神學家，中世紀天主教哲學之核心人物。本通諭 ¶127 援引其論：人之超越自身乃聖寵之工，而非技術之果。",
+      "surface_forms": {
+        "en": [
+          "Saint Thomas Aquinas",
+          "Thomas Aquinas",
+          "\\bAquinas\\b"
+        ],
+        "zh": [
+          "聖多瑪斯·阿奎那",
+          "多瑪斯·阿奎那",
+          "聖多瑪斯",
+          "阿奎那"
+        ]
+      }
     }
   ]
 }

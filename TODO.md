@@ -20,58 +20,66 @@ the top of the page AND the new inline popovers.
   `?action=query&prop=extracts&exintro=1` MediaWiki API; two need manual
   fallback (`Laudato Si'`, `Dignitas Infinita` — Wiki extract API returns
   empty even though articles exist).
+- **`data/glossary.json` finalized** — 14 → 35 entries. 21 new entries
+  added with HK Catholic-style ZH definitions, grounded in actual paragraph
+  references from the encyclical body (verified against `data/encyclical.json`).
+  Two new groups introduced for cleaner organization: `教會文獻與大公會議`
+  (6 entries: Vatican II, Gaudium et Spes, Populorum Progressio, Laudato Si',
+  Fratelli Tutti, Dignitas Infinita) and `教宗與教會人物` (10 entries:
+  Leo XIV/XIII, Pius XI/XII, Paul VI, John Paul II, Benedict XVI, Francis,
+  Augustine, Aquinas). Algorithm + LLM added to AI group. Magisterium,
+  Synodality, Imago Dei added to Catholic terms group. All definitions use
+  HK conventions (`良`/`庇護`/`保祿`/`若望保祿`/`本篤`/`方濟各`/`奧斯定`/
+  `多瑪斯`/`牧職憲章`/`眾位弟兄`/`願祢受讚頌`/`民族發展`/`無限尊嚴`/
+  `演算法`).
 
 ### In progress
 
-- **Write ZH definitions in HK Catholic style** for the ~20 new glossary
-  entries. ZH Wikipedia has poor Catholic doctrine coverage (no articles
-  for `Gaudium et Spes`, `Laudato Si'`, `Dignitas Infinita`,
-  `Synodality`, `Imago Dei`, `Magisterium`, `Common Good`, `Rerum Novarum`),
-  and where articles exist they often use mainland (Beijing) transliteration
-  rather than HK style (e.g. `尼希米` vs `乃赫米雅` for Nehemiah,
-  `约翰保罗二世` vs `若望保祿二世` for John Paul II). User-provided pointers
-  for HK style: <https://catholic.org.hk/> (Cloudflare-blocks bots — needs
-  manual reference), <https://www.catholiccentre.org.hk/> (bookstore, not a
-  glossary). Reachable alternatives: <https://kkp.org.hk/> (公教報) and
-  <https://www.vaticannews.va/zh.html> (Vatican News Chinese).
+- **Visual verification + deploy**. The build pipeline is wired up and
+  `python3 src/build.py` produces a 537 KB `site/index.html` with the
+  expected anchor counts; the user should open the page locally to
+  confirm the glossary styling and popover behavior look right before
+  pushing.
 
 ### Outstanding
 
-1. **Finalize `data/glossary.json`** — add ~20 new entries to the existing
-   14, with HK Catholic ZH definitions. Suggested new entries:
-   - Popes (10): Leo XIV, Leo XIII, Pius XI, Pius XII, Paul VI, John Paul II,
-     Benedict XVI, Francis, Augustine of Hippo, Thomas Aquinas
-   - Documents (5): Gaudium et Spes, Fratelli Tutti, Laudato Si',
-     Populorum Progressio, Dignitas Infinita
-   - Concepts (5+): Second Vatican Council, Synodality, Magisterium,
-     Imago Dei, Algorithm, Large Language Model
-2. **Extend each entry with `surface_forms`** — a list of EN + ZH regex
-   alternations that should match in body text. Critical for catching
-   variants: `Tower of Babel|Babel` for EN, `巴貝耳塔` + `巴貝耳` for ZH,
-   etc. Without this, the wrapper won't match all real occurrences.
-3. **Restore `render_glossary()` in `src/build.py`** — render the collapsed
-   `<details>` block at the top of the page from glossary.json. This fixes
-   the regression I introduced (the original glossary HTML was injected
-   directly into `site/index.html` in commit `21ab984` and got wiped when I
-   rebuilt for the scripture-popover work). See `git show 21ab984:site/index.html`
-   for the visual treatment to match.
-4. **Add `wrap_glossary_terms(text, lang)`** in `src/build.py` — scans
-   rendered text for glossary terms, wraps the first occurrence per
-   paragraph in `<a class="glossary" data-term="<id>">`. Longest-first
-   matching to avoid `Leo` eating `Leo XIII`. Case-sensitive for proper
-   nouns, case-insensitive for common nouns (AI, common good, algorithm).
-5. **Extend the popover JS** to handle `.glossary` anchors. Same popover
-   shape as scripture (header + EN + ZH + close button), but the body is
-   the definition not the scripture text, and the footer is the Wikipedia
-   link(s).
-6. **Pipe through `render_en` and `render_zh`** so both columns get the
-   inline popovers.
-7. **Rebuild + verify** — confirm 62 existing scripture anchors unchanged,
-   collapsed glossary block restored, sample terms (`Fratelli Tutti`,
-   `John Paul II`, `artificial intelligence`) wrap to popover anchors in
-   both EN and ZH columns. Also visually check the page so the glossary
-   styling matches the original (paper-deep background, rule border,
-   cardinal small-caps labels, rotating ▸ disclosure mark).
+1. ~~**Finalize `data/glossary.json`**~~ — DONE 2026-05-27.
+2. ~~**Extend each entry with `surface_forms`**~~ — DONE 2026-05-27.
+3. ~~**Restore `render_glossary()` in `src/build.py`**~~ — DONE 2026-05-27.
+   Visual treatment matches commit `21ab984`: paper-deep background,
+   1px rule border, cardinal small-caps summary, rotating ▸ disclosure
+   mark, dashed-rule h3 group headers, bilingual two-column definition.
+   Generates 35 entries across 4 groups directly from `data/glossary.json`.
+4. ~~**Add `wrap_glossary_terms(text, lang)`**~~ — DONE 2026-05-27.
+   Implementation in `src/build.py`: builds one alternation regex per
+   language over all 35 entries&rsquo; surface forms (longest-first by
+   pattern length), runs *after* `wrap_scripture` and only operates on
+   plain-text segments between existing anchors (so it can&rsquo;t
+   wrap inside a scripture anchor or break attribute markup). Per-block
+   `seen` sets enforce first-occurrence-per-paragraph. Case-insensitive
+   throughout; embedded `\b` boundaries handle the proper-noun overlap
+   cases that needed care.
+5. ~~**Extend the popover JS**~~ — DONE 2026-05-27. Two popover builders
+   share positioning + close + Escape handling. Glossary definitions are
+   pre-tokenized server-side into `[["t", "text"], ["em", "Magnifica
+   Humanitas"], …]` and rendered with `createElement` + `textContent` —
+   **no `innerHTML` anywhere** on dynamic data, per the
+   `security-guidance` hook&rsquo;s recommendation. The static collapsed
+   glossary block emits raw HTML (entities + `<em>`) directly, which is
+   fine because it&rsquo;s server-rendered, not parsed at runtime.
+6. ~~**Pipe through `render_en` and `render_zh`**~~ — DONE 2026-05-27.
+   Both functions now take an optional `seen_gloss: set` parameter;
+   `render_section` allocates fresh sets per paragraph or continuation
+   block so a term can repeat once per block in each column.
+7. ~~**Rebuild + verify**~~ — partially done. Build output:
+   - 62 `a.scripture` anchors (unchanged ✓)
+   - 582 `a.glossary` anchors (across 228 paragraphs in two columns)
+   - 35 entries in the collapsed glossary block, in 4 groups
+   - 394 footnote refs (unchanged)
+   - `node --check` confirms JS parses cleanly
+   - No placeholder leaks (`__SCR_EN__`, `__GLOSSARY__` all substituted)
+   - No `innerHTML` calls in JS (only references in comments)
+   Visual verification in a browser still pending.
 
 ### Open questions
 
